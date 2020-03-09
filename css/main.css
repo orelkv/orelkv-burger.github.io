@@ -366,8 +366,7 @@ table {
   text-transform: uppercase; }
 
 .hero {
-  background: url("../img/hero/hero-bg.jpg") center center/cover no-repeat;
-  opacity: .8; }
+  background: url("../img/hero/hero-bg.jpg") center center/cover no-repeat; }
   .hero-container {
     padding: 10px 80px 40px;
     display: flex;
