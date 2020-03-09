@@ -1,14 +1,12 @@
 .slogan {
-    width: 48%;
-    margin-left: 10px;
-    .section-title {
-        color: $orange;
-    }
-    .slogan__text {
-        color: $white;
-        font-size: 65px;
-        text-transform: lowercase;
-        line-height: 1;
-        @include lifehack();
-    }
+  width: 48%;
+  margin-left: 10px;
+
+  .slogan__text {
+    color: $white;
+    font-size: 65px;
+    text-transform: lowercase;
+    line-height: 1;
+    @include lifehack();
+  }
 }

@@ -1,8 +1,12 @@
 $white: #ffffff;
 $orange: #f9b43b;
 $red: #e45028;
+$black: #2f3234;
+
+
 @import "layout/font.scss";
 @import "layout/normalize.scss";
+@import "layout/mixin.scss";
 @import "layout/base.scss";
 @import "main/hero.scss";
 @import "main/header.scss";
@@ -11,3 +15,7 @@ $red: #e45028;
 @import "main/btn.scss";
 @import "main/slogan.scss";
 @import "main/aside.scss";
+@import "main/best.scss";
+@import "main/feature.scss";
+
+
