@@ -1,7 +1,8 @@
 .btn {
-  padding: 10px 17px;
-  background-color: $red;
-  font-size: 13px;
-  text-transform: uppercase;
-  border-radius: 5px;
+    padding: 10px 17px;
+    background-color: $red;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include ubuntu(medium);
 }
