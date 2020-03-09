@@ -1,13 +1,6 @@
 $white: #ffffff;
 $orange: #f9b43b;
 $red: #e45028;
-
-
-
-
-
-
-
 @import "layout/font.scss";
 @import "layout/normalize.scss";
 @import "layout/base.scss";
@@ -17,3 +10,4 @@ $red: #e45028;
 @import "main/menu.scss";
 @import "main/btn.scss";
 @import "main/slogan.scss";
+@import "main/aside.scss";
