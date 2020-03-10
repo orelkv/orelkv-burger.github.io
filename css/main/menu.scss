@@ -1,32 +1,36 @@
 .header__menu {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    @include ubuntu(medium);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include ubuntu(medium);
 }
 
 .menu {
-    font-size: 13px;
-    text-transform: uppercase;
-    .menu__list {
-        display: inline-flex;
-        align-items: center;
-        .menu__item {
-            margin-right: 15px;
-            display: inline-flex;
-            align-items: center;
-            &:after {
-                content: "";
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background-color: currentColor;
-                margin-left: 15px;
-            }
-            &:last-child:after {
-                margin-right: 0;
-                display: none;
-            }
-        }
+  font-size: 13px;
+  text-transform: uppercase;
+
+  .menu__list {
+    display: inline-flex;
+    align-items: center;
+
+    .menu__item {
+      margin-right: 15px;
+      display: inline-flex;
+      align-items: center;
+
+      &:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: currentColor;
+        margin-left: 15px;
+      }
+
+      &:last-child:after {
+        margin-right: 0;
+        display: none;
+      }
     }
+  }
 }
