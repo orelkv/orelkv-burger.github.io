@@ -1,0 +1,38 @@
+.accordeon {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  &__content {
+    h4 {
+      @include gagalin();
+      font-size: 14px;
+      margin-bottom: 17px;
+
+    }
+  }
+}
+
+.Оператор_С_радостью_поможет_подобрать_идеальный {
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.714;
+  -moz-transform: matrix(0.99999996005553, 0, 0, 1.00058353349561, 0, 0);
+  -webkit-transform: matrix(0.99999996005553, 0, 0, 1.00058353349561, 0, 0);
+  -ms-transform: matrix(0.99999996005553, 0, 0, 1.00058353349561, 0, 0);
+  position: absolute;
+  left: 786.859px;
+  top: 2284.297px;
+  width: 224.157px;
+  height: 70.906px;
+  z-index: 134;
+}
