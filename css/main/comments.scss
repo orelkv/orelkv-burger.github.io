@@ -1,0 +1,52 @@
+.comments {
+  background-color: #000000;
+  &__container {
+    width: 100%;
+  }
+  &__list {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    width: calc(100% / 4);
+    position: relative;
+  }
+  &__img {
+    filter: grayscale(100%);
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    padding-top: 10px;
+    position: absolute;
+    color: $white;
+
+    h2 {
+      @include ubuntu(bold);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    p {
+      @include ubuntu();
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+  }
+  &__link {
+    @include ubuntu(normal);
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: #2f3234;
+    font-size: 13px;
+  }
+}
