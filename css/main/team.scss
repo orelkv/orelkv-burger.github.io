@@ -1,29 +1,13 @@
 .team {
+  
   &__container {
     position: relative;
+    height: 100%;
+    background: url("../img/team/team-fon.jpg") center center / cover no-repeat;
   }
 
   // &__img {
-  //   // height: 100%;
-  //   // object-fit: cover;
+  //   height: 100%;
+  //   object-fit: cover;
   // }
-
-  &__content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    padding: 97px  97px 0 ;
-    background-color: $black;
-    opacity: 93%;
-  }
-
-  &__status {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
 }

@@ -1,0 +1,36 @@
+.menu-accordeon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  &__list {
+    display: inline-flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__item {
+  display: inline-flex;
+  height: 100%;
+  }
+
+  &__left-col {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+
+
+    h3 {
+      transform: rotate(-90deg);
+      font-size: 40px;
+      @include gagalin();
+      color: $white;
+    }
+  }
+}
+
