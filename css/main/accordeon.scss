@@ -2,7 +2,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
   }
 
   &__item {
@@ -10,28 +9,6 @@
     color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  &__item--active {
-    margin-bottom: 25px;
-
-    .accordeon {
-      
-      &__content {
-        h4 {
-          color: $orange;
-
-          &::before {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      &__section {
-        height: initial;
-      }
-    }
   }
 
   &__content {
@@ -52,7 +29,6 @@
       }
     }
   }
-
 
   &__section {
     height: 0;
@@ -85,7 +61,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-self: flex-start;
 
     h5 {
       @include ubuntu(bold);
@@ -99,6 +74,27 @@
       font-size: 14px;
       line-height: 1.71;
       height: 100%;
+    }
+  }
+
+  &__item--active {
+    margin-bottom: 25px;
+
+    .accordeon {
+      
+      &__content {
+        h4 {
+          color: $orange;
+
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &__section {
+        height: initial;
+      }
     }
   }
 }
