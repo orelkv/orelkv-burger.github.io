@@ -12,9 +12,10 @@
   .menu__list {
     display: inline-flex;
     align-items: center;
+    margin-right: 12px;
 
     .menu__item {
-      margin-right: 15px;
+      margin-right: 16px;
       display: inline-flex;
       align-items: center;
 
@@ -27,9 +28,13 @@
         margin-left: 15px;
       }
 
-      &:last-child:after {
+      &:last-child {
         margin-right: 0;
-        display: none;
+
+        &:after {
+          margin-right: 0;
+          display: none;
+        }
       }
     }
   }

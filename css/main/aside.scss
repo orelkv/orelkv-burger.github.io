@@ -1,8 +1,9 @@
 .aside {
   position: absolute;
   display: block;
-  top: 86px;
-  right: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
 
   &__link {
     padding: 0 9px;

@@ -1,8 +1,25 @@
-.btn {
-  padding: 10px 17px;
-  background-color: $red;
-  font-size: 13px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  @include ubuntu(medium);
-}
+  .btn {
+    padding: 10px 17px;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include ubuntu(medium);
+    text-align: center;
+    display: inline-block;
+
+    &_red {
+      background-color: $red;
+
+      &:hover &:active {
+        background-color: #c1401e;
+      }
+    }
+
+    &_grey {
+      background-color: $grey;
+
+      &:hover &:active {
+        background-color: #1f2122;
+      }
+    }
+  }
