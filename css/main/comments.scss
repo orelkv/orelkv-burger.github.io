@@ -34,6 +34,7 @@
     &:hover {
       &:after {
         opacity: .6;
+        transition: all .3s;
       }
 
       .comments__article {
