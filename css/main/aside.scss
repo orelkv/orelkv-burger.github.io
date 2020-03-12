@@ -22,7 +22,7 @@
     background-color: #ffffff;
   }
 
-  &__link--active {
+  &__link_active {
     &:before {
       content: "";
       width: 14px;
@@ -39,6 +39,6 @@
   }
 
   &__link:hover {
-    @extend .aside__link--active;
+    @extend .aside__link_active;
   }
 }

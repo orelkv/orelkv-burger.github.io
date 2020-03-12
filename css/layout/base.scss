@@ -83,15 +83,15 @@ table {
   margin-bottom: 35px;
 
 
-  &--center {
+  &_center {
     text-align: center;
   }
 
-  &--black {
+  &_black {
     color: $black;
   }
 
-  &--white {
+  &_white {
     color: #ffffff;
   }
 }

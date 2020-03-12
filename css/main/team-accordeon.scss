@@ -1,24 +1,4 @@
 .team-accordeon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    padding: 97px  97px 0 ;
-    background-color: $black;
-    opacity: 93%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-  
-
-  &__status {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
 
   &__list {
     display: flex;
@@ -98,11 +78,11 @@
     }
   }
 
-  &__item--active {
+  &__item_active {
     margin-bottom: 25px;
 
     .team-accordeon {
-      
+
       &__text {
         h4 {
           color: $orange;
