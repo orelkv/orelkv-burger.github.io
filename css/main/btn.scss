@@ -10,7 +10,7 @@
     &_red {
       background-color: $red;
 
-      &:hover &:active {
+      &:hover {
         background-color: #c1401e;
       }
     }
@@ -18,7 +18,7 @@
     &_grey {
       background-color: $grey;
 
-      &:hover &:active {
+      &:hover {
         background-color: #1f2122;
       }
     }
