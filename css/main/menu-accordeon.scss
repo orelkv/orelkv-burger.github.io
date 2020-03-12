@@ -13,23 +13,54 @@
   &__item {
     display: inline-flex;
     height: 100%;
+    // background-size: 100%;
+    // background-position: 0 0;
   }
 
+
   &__left-col {
-    width: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 40px;
+    padding: 40px 22px;
+  }
 
+  h3 {
+    font-size: 40px;
+    @include gagalin();
+    color: $white;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: inline-block;
+    line-height: 2;
+  }
 
-    h3 {
-      transform: rotate(-90deg);
-      font-size: 40px;
-      @include gagalin();
-      color: $white;
+  &__right-col {
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    p {
+      @include ubuntu();
+      line-height: 1.714;
+      color: #ffffff;
     }
   }
 }
+
+.menu-accordeon__item_active {
+  .menu-accordeon__right-col {
+    width: 480px;
+    padding: 0 35px;
+  }
+}
+
+@each $food in (meet, vegan, diet) {
+  .menu-accordeon__item_#{$food} {
+    background: url('../img/menu/#{$food}.jpg') no-repeat;
+  }
+}
+
