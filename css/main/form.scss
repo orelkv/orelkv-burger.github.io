@@ -1,0 +1,88 @@
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  @include ubuntu();
+  font-size: 14px;
+  color: #ffffff;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 16px;
+
+    &-textarea {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__block {
+    margin-left: 19px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    padding: 8px 21px;
+    color: #2f3234;
+    border-radius: 5px;
+    border: solid 1px #d1cfcb;
+    outline: none;
+
+    &:focus {
+      border: solid 2px #f9b43b;
+      padding: 7px 20px;
+    }
+  }
+
+  &__text-textarea {
+    height: 107px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__buttons-row {
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.switch-control {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__title {
+    margin-left: 8px;
+  }
+
+  // &__radio-elem {
+  //   width: 18px;
+  //   height: 18px;
+  //   border-radius: 50%;
+  //   border: 1px solid #cdcdcd;
+  //   background-image: linear-gradient(180deg, #ffffff, #cecece);
+  //   display: inline-flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin-right: 5px;
+  //   transition: all 0.5s;
+  // }
+}

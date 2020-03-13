@@ -6,6 +6,7 @@
     @include ubuntu(medium);
     text-align: center;
     display: inline-block;
+    color: #ffffff;
 
     &_red {
       background-color: $red;
@@ -22,4 +23,12 @@
         background-color: #1f2122;
       }
     }
+
+    &_reset {
+      background-color: transparent;
+      font-size: 14px;
+      text-transform: capitalize;
+
+    }
+
   }

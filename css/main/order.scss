@@ -1,0 +1,20 @@
+.order {
+  background: url('../img/order/order-bg.jpg') center center / cover no-repeat;
+  // background-color: #000000;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__form-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // margin-left: -20px;
+  }
+}

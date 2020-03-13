@@ -72,7 +72,7 @@
                 </li>
               </ul>
             </nav>
-            <a href="#order" class="btn btn_red">Заказать</a>
+            <button class="btn btn_red" type="submit">Заказать</button>
           </div>
         </header>
 
@@ -292,7 +292,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -304,7 +304,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -316,7 +316,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -328,7 +328,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -340,7 +340,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -352,7 +352,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -364,7 +364,7 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
@@ -376,12 +376,89 @@
               думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
               расплавленным.</p>
             <div class="comments__details">
-              <a href="#" class="btn btn_grey">Подробнее</a>
+              <button class="btn btn_grey" type="submit">Подробнее</button>
             </div>
           </article>
         </li>
       </ul>
     </div>
+
+    <section class="section order" id="order">
+      <div class="container order__container">
+        <h2 class="section__title section__title_center">
+          Закажите доставку
+        </h2>
+        <div class="order__form-content">
+          <form action="" class="form">
+            <div class="form__row">
+              <label class="form__block">
+                <span class="form__title">Имя</span>
+                <input type="text" class="form__text">
+              </label>
+              <label class="form__block">
+                <span class="form__title">Телефон</span>
+                <input type="text" class="form__text">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__block">
+                <span class="form__title">Улица</span>
+                <input type="text" class="form__text">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__block">
+                <span class="form__title">Дом</span>
+                <input type="text" class="form__text">
+              </label>
+              <label class="form__block">
+                <span class="form__title">Корпус</span>
+                <input type="text" class="form__text">
+              </label>
+              <label class="form__block">
+                <span class="form__title">Квартира</span>
+                <input type="text" class="form__text">
+              </label>
+              <label class="form__block">
+                <span class="form__title">Этаж</span>
+                <input type="text" class="form__text">
+              </label>
+            </div>
+          </form>
+          <form action="" class="form">
+            <div class="form__row form__row-textarea">
+              <label class="form__block form__block-textarea">
+                <span class="form__title">Комментарий</span>
+                <textarea class="form__text form__text-textarea"></textarea>
+              </label>
+            </div>
+            <div class="form__buttons-row">
+              <label class="switch-control">
+                <input type="radio" class="switch-control__radio" name="switch-control__radio">
+                <span class="switch-control__elem"></span>
+                <span class="switch-control__title">Потребуется сдача</span>
+              </label>
+              <label class="switch-control">
+                <input type="radio" class="switch-control__radio" name="switch-control__radio">
+                <span class="switch-control__elem"></span>
+                <span class="switch-control__title">Оплата по карте</span>
+              </label>
+            </div>
+            <div class="form__buttons-row">
+              <label class="switch-control">
+                <input type="checkbox" class="switch-control__checkbox">
+                <span class="switch-control__elem"></span>
+                <span class="switch-control__title">Потребуется сдача</span>
+              </label>
+            </div>
+            <div class="form__buttons">
+              <button class="btn btn_red" type="submit">Заказать</button>
+              <button class="btn btn_reset" type="reset">Очистить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
 
     <div class="section maps" id="maps">
