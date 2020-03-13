@@ -1,0 +1,21 @@
+.footer {
+  background-color: $black;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+  }
+
+  &__elem {
+    width: 50%;
+  }
+}

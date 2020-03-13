@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  flex-direction: column;  
+
+  &__address {
+    @include ubuntu();
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    @include ubuntu(bold);
+    font-size: 14px;
+    color: $red;
+    display: flex;
+
+    &:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin-right: 5px;
+      align-self: center;
+      background: url("../img/maps/phone.png") center center no-repeat;
+    }
+  }
+}

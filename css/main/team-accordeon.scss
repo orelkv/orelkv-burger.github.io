@@ -6,7 +6,6 @@
   }
 
   &__item {
-    // margin-bottom: 10px;
     color: $white;
     display: flex;
     flex-direction: column;
@@ -54,10 +53,6 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-  }
-
-  &__img {
-    max-width: initial;
   }
 
   &__right-col {
