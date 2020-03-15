@@ -6,6 +6,7 @@
 
 html {
   height: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   background-color: #ffffff;
   height: 100%;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -55,8 +57,9 @@ table {
 
 .wrapper {
   overflow: hidden;
-  min-width: 1100px;
+  min-width:0;
   min-height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -66,12 +69,13 @@ table {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 650px;
+  min-height: 100%;
   position: relative;
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 980px;
 }
 
 .section__title {
@@ -80,8 +84,7 @@ table {
   text-transform: uppercase;
   @include gagalin();
   color: $orange;
-  margin-bottom: 35px;
-
+  margin-bottom: 40px;
 
   &_center {
     text-align: center;

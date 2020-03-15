@@ -3,25 +3,28 @@
   top: 0;
   right: 0;
   height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+
 
   &__list {
     display: inline-flex;
     justify-content: flex-end;
     height: 100%;
+
   }
 
   &__item {
     display: inline-flex;
-    height: 100%;
+    background-size: auto 100%;
+    background-position-x: 100%;
   }
 
-
   &__left-col {
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     padding: 40px 22px;
   }
 
@@ -32,7 +35,7 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     display: inline-block;
-    line-height: 2;
+    line-height: 1;
   }
 
   &__right-col {
@@ -40,6 +43,8 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    background-color: rgb(47, 50, 52);
+    opacity: 0.929;
 
     p {
       @include ubuntu();
@@ -47,18 +52,25 @@
       color: #ffffff;
     }
   }
-}
+  &__item_active {
 
-.menu-accordeon__item_active {
   .menu-accordeon__right-col {
-    width: 480px;
+    width: 50vw;
     padding: 0 35px;
+    }
+
+  .menu-accordeon__left-col h3 {
+     color: $orange;
+    }  
+    .menu-accordeon__right-col p {
+      opacity: initial;
+    }
+
   }
 }
 
 @each $food in (meet, vegan, diet) {
   .menu-accordeon__item_#{$food} {
-    background: url('../img/menu/#{$food}.jpg') no-repeat;
+    background-image: url('../img/menu/#{$food}.jpg');
   }
 }
-

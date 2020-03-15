@@ -1,3 +1,5 @@
+
+
 .social {
   display: flex;
   justify-content: flex-end;
@@ -23,10 +25,10 @@
       background-color: #ffffff;
     }
   }
+}
 
-  &__img {
-    // filter: invert(1);
-    // filter: invert(1);
-    // filter: invert(1);
+@each $social in (vk, fb, inst, twit) {
+  .social__item_#{$social}:hover {
+    background: url('../img/maps/#{social}.png');
   }
 }

@@ -19,6 +19,9 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:after {
       content: "";
@@ -58,7 +61,7 @@
     color: $white;
     opacity: 0;
     transform: scale(.7);
-    width: 222px;
+    padding: 0 20px;
 
 
     h4 {
@@ -77,9 +80,9 @@
   }
 }
 
-@each $name in (smile-girl, man, blondi,
-tourist, yonger, erica, grandpa, pit) {
-.comments__item_#{$name} {
-  background: url('../img/comments/#{$name}.jpg') center center / cover no-repeat;
-}
-}
+// @each $name in (smile-girl, man, blondi,
+// tourist, yonger, erica, grandpa, pit) {
+// .comments__item_#{$name} {
+//   background: url('../img/comments/#{$name}.jpg') center center / cover no-repeat;
+// }
+// }

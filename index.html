@@ -45,7 +45,9 @@
       </aside>
       <div class="container hero__container">
         <header class="header">
-          <img src="./img/hero/logo.png" alt="logo our firm" class="logo">
+          <div class="logo">
+            <img src="./img/hero/logo.png" alt="logo our firm" class="logo">
+          </div>
           <div class="header__menu">
             <nav class="menu">
               <ul class="menu__list">
@@ -185,7 +187,7 @@
                   <section class="team-accordeon__text">
                     <h4>Джейк Финн</h4>
                     <div class="team-accordeon__section">
-                      <div class="team-accordeon__left-col">
+                      <div class="team-accordeon__left-col team-accordeon__left-col_active">
                         <div class="team-accordeon__pic">
                           <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
                         </div>
@@ -281,10 +283,9 @@
     </section>
 
 
-
     <div class="section comments" id="comments">
       <ul class="comments__list">
-        <li class="comments__item comments__item_smile-girl">
+        <li class="comments__item" style="background-image: url('./img/comments/smile-girl.jpg')">
           <img src="./img/comments/smile-girl.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -296,7 +297,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_man">
+        <li class="comments__item" style="background-image: url('./img/comments/man.jpg')">
           <img src="./img/comments/man.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -308,7 +309,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_blondi">
+        <li class="comments__item" style="background-image: url('./img/comments/blondi.jpg')">
           <img src="./img/comments/blondi.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -320,7 +321,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_tourist">
+        <li class="comments__item" style="background-image: url('./img/comments/tourist.jpg')">
           <img src="./img/comments/tourist.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -332,7 +333,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_yonger">
+        <li class="comments__item" style="background-image: url('./img/comments/yonger.jpg')">
           <img src="./img/comments/yonger.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -344,7 +345,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_erica">
+        <li class="comments__item" style="background-image: url('./img/comments/erica.jpg')">
           <img src="./img/comments/erica.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -356,7 +357,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_grandpa">
+        <li class="comments__item" style="background-image: url('./img/comments/grandpa.jpg')">
           <img src="./img/comments/grandpa.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -368,7 +369,7 @@
             </div>
           </article>
         </li>
-        <li class="comments__item comments__item_pit">
+        <li class="comments__item" style="background-image: url('./img/comments/pit.jpg')">
           <img src="./img/comments/pit.jpg" alt="" class="comments__img">
           <article class="comments__article">
             <h4>Константин Спилберг</h4>
@@ -390,6 +391,7 @@
         </h2>
         <div class="order__form-content">
           <form action="" class="form">
+            <div class="form__col">
             <div class="form__row">
               <label class="form__block">
                 <span class="form__title">Имя</span>
@@ -424,8 +426,8 @@
                 <input type="text" class="form__text">
               </label>
             </div>
-          </form>
-          <form action="" class="form">
+          </div>
+            <div class="form__col">
             <div class="form__row form__row-textarea">
               <label class="form__block form__block-textarea">
                 <span class="form__title">Комментарий</span>
@@ -434,27 +436,28 @@
             </div>
             <div class="form__buttons-row">
               <label class="switch-control">
-                <input type="radio" class="switch-control__radio" name="switch-control__radio">
-                <span class="switch-control__elem"></span>
+                <input type="radio" class="switch-control__elem" value="yes" name="switch-control__radio">
+                <span class="switch-control__radio-elem"></span>
                 <span class="switch-control__title">Потребуется сдача</span>
               </label>
               <label class="switch-control">
-                <input type="radio" class="switch-control__radio" name="switch-control__radio">
-                <span class="switch-control__elem"></span>
+                <input type="radio" class="switch-control__elem" value="no" name="switch-control__radio">
+                <span class="switch-control__radio-elem"></span>
                 <span class="switch-control__title">Оплата по карте</span>
               </label>
             </div>
             <div class="form__buttons-row">
               <label class="switch-control">
-                <input type="checkbox" class="switch-control__checkbox">
-                <span class="switch-control__elem"></span>
-                <span class="switch-control__title">Потребуется сдача</span>
+                <input type="checkbox" class="switch-control__elem">
+                <span class="switch-control__checkbox-elem"></span>
+                <span class="switch-control__title">Не перезванивать</span>
               </label>
             </div>
             <div class="form__buttons">
               <button class="btn btn_red" type="submit">Заказать</button>
               <button class="btn btn_reset" type="reset">Очистить</button>
             </div>
+          </div>
           </form>
         </div>
       </div>
@@ -472,24 +475,24 @@
           </div>
           <div class="footer__elem social">
             <ul class="social__list">
-              <li class="social__item">
+              <li class="social__item social__item_vk">
                 <div class="social__pic">
-                  <img src="../img/maps/vk.png" alt="" class="social__img social__img_active">
+                  <!-- <img src="../img/maps/vk.png" alt="" class="social__img social__img_active"> -->
                 </div>
               </li>
-              <li class="social__item">
+              <li class="social__item social__item_fb">
                 <div class="social__pic">
-                  <img src="../img/maps/fb.png" alt="" class="social__img social__img_active">
+                  <!-- <img src="../img/maps/fb.png" alt="" class="social__img social__img_active"> -->
                 </div>
               </li>
-              <li class="social__item">
+              <li class="social__item social__item_inst">
                 <div class="social__pic">
-                  <img src="../img/maps/inst.png" alt="" class="social__img social__img_active">
+                  <!-- <img src="../img/maps/inst.png" alt="" class="social__img social__img_active"> -->
                 </div>
               </li>
-              <li class="social__item">
+              <li class="social__item social__item_twit">
                 <div class="social__pic">
-                  <img src="../img/maps/twitter.png" alt="" class="social__img social__img_active">
+                  <!-- <img src="../img/maps/twitter.png" alt="" class="social__img social__img_active"> -->
                 </div>
               </li>
             </ul>

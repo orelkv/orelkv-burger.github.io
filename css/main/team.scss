@@ -1,5 +1,6 @@
 .team {
   background: url("../img/team/team-fon.jpg") center center / cover no-repeat;
+  background-position-y: 0;
 
   &:after {
     content: "";
@@ -26,7 +27,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 0 0 97px;
+    padding: 0 0 0 9%;
     z-index: 2;
   }
 }
