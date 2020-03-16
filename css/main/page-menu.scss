@@ -5,8 +5,11 @@
     position: absolute;
     top: 22%;
     left: 12%;
-    @include tablets {
+    @include laptop{
       left: 5%;
+    }
+    @include tablets {
+      left: 2%;
     }
   }
 }
