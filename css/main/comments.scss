@@ -4,6 +4,7 @@
   &__details {
     position: relative;
   }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -104,7 +105,8 @@
   &__comments {
     @include phones {
       display: none;
-    } 
+    }
+
     &_phones {
       position: absolute;
       top: 0;
@@ -113,9 +115,10 @@
       transform: translateX(50%);
       font-size: rem(15px);
       white-space: nowrap;
+
       @include phones {
         display: block;
       }
-    }    
-  }  
+    }
+  }
 }

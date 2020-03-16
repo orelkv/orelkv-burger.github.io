@@ -26,9 +26,11 @@
     justify-content: center;
     align-items: flex-end;
     padding: rem(40px) rem(22px);
+
     @include tablets {
       padding: rem(40px) rem(20px);
     }
+
     @include phones {
       padding: rem(72px) rem(24px);
     }
@@ -42,6 +44,7 @@
     transform: rotate(180deg);
     display: inline-block;
     line-height: 1;
+
     @include phones {
       font-size: rem(45px);
     }
@@ -61,20 +64,22 @@
       color: #ffffff;
     }
   }
+
   &__item_active {
 
-  .menu-accordeon__right-col {
-    width: 50vw;
-    padding: 0 rem(35px);
+    .menu-accordeon__right-col {
+      width: 50vw;
+      padding: 0 rem(35px);
 
-    @include tablets {
-      width: 100%;
-    }
+      @include tablets {
+        width: 100%;
+      }
     }
 
-  .menu-accordeon__left-col h3 {
-     color: $orange;
-    }  
+    .menu-accordeon__left-col h3 {
+      color: $orange;
+    }
+
     .menu-accordeon__right-col p {
       opacity: initial;
     }

@@ -18,9 +18,11 @@
       width: 100%;
     }
   }
+
   &__container {
     position: relative;
     height: 100%;
+
     @include tablets {
       display: flex;
       justify-content: center;

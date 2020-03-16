@@ -7,8 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @include phones {
-      width: 95%;      
+      width: 95%;
     }
 
   }
@@ -17,10 +18,10 @@
     display: flex;
     width: 100%;
   }
-  }
+}
 
-  .section__title-order {
-    @include phones {
-      font-size: rem(56px);
-    }
+.section__title-order {
+  @include phones {
+    font-size: rem(56px);
   }
+}

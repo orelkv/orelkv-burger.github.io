@@ -1,6 +1,6 @@
 .contacts {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 
 
 
@@ -9,6 +9,7 @@
     font-size: rem(14px);
     color: #ffffff;
     margin-bottom: rem(5px);
+
     @include phones {
       text-align: center;
       font-size: rem(18px);
@@ -19,21 +20,20 @@
     @include ubuntu(bold);
     font-size: rem(14px);
     color: $red;
-    display: flex;
-    @include phones {
-     justify-content: center;
-     font-size: rem(18px);
-     margin-bottom: 15px;
-    }
+    display: inline-flex;
 
-    &:before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      margin-right: rem(5px);
-      align-self: center;
-      background: url("../img/maps/phone.png") center center no-repeat;
+    @include phones {
+      justify-content: center;
+      font-size: rem(18px);
+      margin-bottom: 15px;
     }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    align-self: center;
+    display: inline-block;
+    margin-right: rem(5px);
   }
 }

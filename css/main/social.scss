@@ -1,8 +1,8 @@
-
-
 .social {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+
   @include phones {
     justify-content: center;
   }
@@ -10,34 +10,27 @@
   &__list {
     display: inline-flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
   &__item {
     margin-left: rem(20px);
+
     &:first-child {
       @include phones {
         margin-left: 0;
       }
-    
     }
   }
-
-  &__pic {
+  
+  &__img {
     width: 23px;
-    height: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:1px;
+    height: 20px;
+    opacity: .3;
 
     &:hover {
-      background-color: #ffffff;
+      fill: #ffffff;
+      opacity: 1;
     }
-  }
-}
-
-@each $social in (vk, fb, inst, twit) {
-  .social__item_#{$social}:hover {
-    background: url('../img/maps/#{social}.png');
   }
 }

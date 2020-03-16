@@ -1,0 +1,16 @@
+.hero {
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    flex: 1;
+
+    @include phones {
+      width: 83%;
+      margin-bottom: rem(42px);
+    }
+  }
+}

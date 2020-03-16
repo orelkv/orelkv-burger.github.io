@@ -8,6 +8,7 @@
     text-align: center;
     margin: 0;
   }
+
   @include phones {
     margin: 0;
     width: 100%;
@@ -20,6 +21,7 @@
     text-transform: lowercase;
     line-height: 1;
     @include lifehack();
+
     @include phones {
       font-size: rem(63px);
     }
