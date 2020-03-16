@@ -9,6 +9,11 @@
     margin-left: rem(30px);
   }
 
+  &:hover {
+    cursor: pointer;
+    
+  }
+
   &__elem {
   width: 25px;
   height: 4px; 

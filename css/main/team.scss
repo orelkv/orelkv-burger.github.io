@@ -47,3 +47,10 @@
     }
   }
 }
+
+.section__title-team {
+  @include phones {
+    font-size: rem(56px);
+    margin-bottom: rem(20px);
+  }
+}

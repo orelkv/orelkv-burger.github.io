@@ -22,5 +22,9 @@
 
   &__elem {
     width: 50%;
+    flex: 1;
+    @include phones {
+      width: 90%;
+    }
   }
 }

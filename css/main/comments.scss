@@ -1,6 +1,9 @@
 .comments {
   background-color: #000000;
 
+  &__details {
+    position: relative;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -65,12 +68,22 @@
     transform: scale(.7);
     padding: 0 rem(20px);
 
+    @include phones {
+      align-items: center;
+    }
+
 
     h4 {
       @include gagalin();
       margin-bottom: rem(19px);
       text-transform: uppercase;
       font-size: rem(14px);
+
+      @include phones {
+        font-size: rem(26px);
+        text-align: center;
+        margin-bottom: rem(25px);
+      }
     }
 
     p {
@@ -78,13 +91,28 @@
       margin-bottom: rem(12px);
       font-size: rem(14px);
       line-height: 1.71;
+
+      @include phones {
+        display: none;
+      }
+
     }
   }
 }
 
-// @each $name in (smile-girl, man, blondi,
-// tourist, yonger, erica, grandpa, pit) {
-// .comments__item_#{$name} {
-//   background: url('../img/comments/#{$name}.jpg') center center / cover no-repeat;
-// }
-// }
+.btn {
+  &__comments {
+    @include phones {
+      display: none;
+    } 
+    &_phones {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      display: block;
+      font-size: rem(15px);
+      white-space: nowrap;
+    }    
+  }  
+}

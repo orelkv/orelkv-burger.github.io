@@ -11,6 +11,7 @@
     margin-bottom: rem(5px);
     @include phones {
       text-align: center;
+      font-size: rem(18px);
     }
   }
 
@@ -21,6 +22,8 @@
     display: flex;
     @include phones {
      justify-content: center;
+     font-size: rem(18px);
+     margin-bottom: 15px;
     }
 
     &:before {

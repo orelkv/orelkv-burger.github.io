@@ -7,8 +7,9 @@
 html {
   height: 100%;
   font-size: rem(16px);
+
   @include phones {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -41,6 +42,7 @@ button {
   border: none;
   background: transparent;
   cursor: pointer;
+  outline: none;
 }
 
 h1,
@@ -60,7 +62,7 @@ table {
 
 .wrapper {
   overflow: hidden;
-  min-width:0;
+  min-width: 0;
   min-height: 100%;
   width: 100%;
   position: relative;
@@ -78,12 +80,16 @@ table {
 
 .container {
   width: 95%;
-  max-width: 980px;
+  max-width: 950px;
+
   @include laptop {
     max-width: 768px;
+    width: 93%;
   }
+
   @include phones {
     max-width: 480px;
+    width: 91%;
   }
 
 }
@@ -98,6 +104,7 @@ table {
 
   @include tablets {
     text-align: center;
+    margin-bottom: rem(40px);
   }
 
   &_center {
@@ -112,4 +119,3 @@ table {
     color: #ffffff;
   }
 }
-

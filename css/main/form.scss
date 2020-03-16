@@ -1,34 +1,39 @@
 .form {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
+
   @include tablets {
     flex-direction: column;
     align-items: center;
   }
 
   &__col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-left: rem(20px);
-  @include ubuntu();
-  font-size: rem(14px);
-  color: #ffffff;
-  @include tablets {
-    margin: 0;
-    width: 60%;
-        align-items: center;
-  }
-  @include phones {
-    margin: 0;
-    width: 100%;
-        align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: rem(20px);
+    @include ubuntu();
+    font-size: rem(14px);
+    color: #ffffff;
+
+    @include tablets {
+      margin: 0;
+      width: 66%;
+      align-items: center;
+    }
+
+    @include phones {
+      margin: 0;
+      width: 100%;
+      align-items: center;
+      font-size: rem(18px);
+    }
   }
 
   &:first-child {
     margin-left: 0;
   }
-}
+
 
   &__row {
     display: flex;
@@ -36,9 +41,19 @@
     margin-bottom: rem(16px);
     justify-content: flex-start;
 
+    @include tablets {
+      margin-bottom: rem(17px);
+    }
+
+    @include phones {
+      margin-bottom: rem(18px);
+    }
 
     &-textarea {
       margin-bottom: rem(18px);
+      @include phones {
+        margin-bottom: rem(48px);
+      }
     }
   }
 
@@ -69,23 +84,30 @@
 
   &__text-textarea {
     height: rem(107px);
+
+    @include phones {
+      height: rem(120px);
+    }
   }
 
   &__title {
     margin-bottom: rem(5px);
   }
 
-
   &__buttons-row {
     margin-bottom: rem(22px);
     width: 100%;
+
+    @include tablets {
+      margin-bottom: rem(26px);
+    }
+
     @include phones {
       text-align: center;
     }
 
-
     &:last-child {
-      margin-bottom: rem(20px);
+      margin-bottom: 0;
     }
   }
 }
@@ -112,26 +134,31 @@
     opacity: 0;
     width: 15px;
     height: 15px;
+    @include phones {
+      margin-bottom: rem(35px);
+    }
+
 
     &:checked~ {
       .switch-control__radio-elem:after {
         background-color: $red;
       }
+
       .switch-control__checkbox-elem:after {
         background: url(../img/form/checkbox.png) center center no-repeat;
       }
     }
   }
- 
-    &__radio-elem {
+
+  &__radio-elem {
     width: 15px;
-    height:15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #ffffff;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-      
+
     &:after {
       content: "";
       width: 7px;
@@ -139,9 +166,9 @@
       border-radius: 50%;
       background-color: transparent;
       display: block;
-      }
     }
-  
+  }
+
   &__checkbox-elem {
     @extend .switch-control__radio-elem;
     border-radius: 0;

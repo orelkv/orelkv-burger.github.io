@@ -5,4 +5,11 @@
   color: $white;
   width: 100%;
   padding-top: 1%;
+
+  @include tablets {
+    padding-top: 2%;
+  }
+  @include phones {
+    padding-top: 3%;
+  }
 }

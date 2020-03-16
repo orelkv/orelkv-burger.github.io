@@ -3,13 +3,20 @@
 
   .section__title_absolute {
     position: absolute;
-    top: 22%;
-    left: 12%;
+    top: 14%;
+    left: 9%;
     @include laptop{
       left: 5%;
     }
     @include tablets {
-      left: 2%;
+      left: 3%;
+      top: 10%;
     }
+    @include phones {
+      left: 13%;
+      top: 6%;
+      font-size: rem(57px);
+    }
+
   }
 }

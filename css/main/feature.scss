@@ -5,6 +5,7 @@
   &__list {
     display: flex;
     justify-content: center;
+
     @include phones {
       flex-direction: column;
     }
@@ -18,28 +19,25 @@
     flex: 1;
     margin-right: rem(19px);
     text-align: center;
+
     @include phones {
       flex-direction: row;
       text-align: left;
-      margin: 0 0 rem(45px);
+      margin: 0 0 rem(51px);
     }
-    
-    
+
+
     &:last-child {
       margin-right: 0;
     }
   }
-  
+
   &__pic {
     margin-bottom: rem(30px);
     width: 28%;
     display: flex;
     justify-content: center;
     align-items: center;
-      // @include phones {
-      //   flex-direction: row;
-      //   text-align: left;
-      // }
   }
 
   &__article {
@@ -51,12 +49,19 @@
       font-size: rem(24px);
       margin-bottom: rem(20px);
       line-height: 1.17;
+      @include phones {
+        font-size: rem(26px);
+      }
+
     }
 
     p {
       @include ubuntu();
       font-size: rem(14px);
       line-height: 1.71;
+      @include phones {
+        font-size: rem(16px);
+      }
     }
   }
 }

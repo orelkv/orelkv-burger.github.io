@@ -1,3 +1,18 @@
 .best {
   background: url("../img/the-best/best-fon.jpg") center center / cover no-repeat;
+
+
+  &__container {
+    @include phones {
+      width: 95%;
+    }
+  }
+}
+
+.section__title-best {
+  @include phones {
+    font-size: rem(57px);
+    margin-bottom: rem(30px);
+
+  }
 }

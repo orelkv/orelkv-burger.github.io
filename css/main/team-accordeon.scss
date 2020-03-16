@@ -20,6 +20,13 @@
       @include gagalin();
       font-size: rem(14px);
       margin-bottom: rem(10px);
+      @include tablets {
+        font-size: rem(23px);
+      }
+      @include tablets {
+        font-size: rem(28px);
+      }
+
 
       &::before {
         content: "";
@@ -50,17 +57,22 @@
 
   &__left-col {
     margin-right: rem(19px);
-    width: rem(100px);
+    width: rem(180px);
     height: 100%;
+    display: flex;
+    justify-content: center;
 
     @include tablets {
-      margin: 0 0 rem(10px);
+      margin: 0 0 rem(15px);
+    }
+    @include phones {
+      width: 100%;
     }
   }
 
   &__pic {
-    width: 100%;
-    height: 100%;
+    width: rem(115px);
+    height: 0;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -71,23 +83,32 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-size: rem(14px);
+
 
     @include tablets {
       width: 60%;
     }
+    @include phones {
+      font-size: rem(19px);
+      width: 100%;
+    }
+
 
     h5 {
       @include ubuntu(bold);
-      font-size: rem(14px);
       height: 100%;
       margin-bottom: rem(13px);
     }
 
     p {
       @include ubuntu();
-      font-size: rem(14px);
       line-height: 1.71;
       height: 100%;
+      @include phones {
+        font-size: rem(17px);
+      }
+  
     }
   }
 
@@ -96,6 +117,10 @@
     height: initial;
 
     .team-accordeon {
+
+      &__pic {
+        height: rem(115px);
+      }
 
       &__text {
         h4 {
