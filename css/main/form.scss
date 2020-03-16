@@ -1,15 +1,29 @@
 .form {
   display: flex;
   justify-content: center;  
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__col {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: rem(20px);
   @include ubuntu();
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
+  @include tablets {
+    margin: 0;
+    width: 60%;
+        align-items: center;
+  }
+  @include phones {
+    margin: 0;
+    width: 100%;
+        align-items: center;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -18,15 +32,18 @@
 
   &__row {
     display: flex;
-    margin-bottom: 16px;
+    width: 100%;
+    margin-bottom: rem(16px);
+    justify-content: flex-start;
+
 
     &-textarea {
-      margin-bottom: 18px;
+      margin-bottom: rem(18px);
     }
   }
 
   &__block {
-    margin-left: 19px;
+    margin-left: rem(19px);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -38,38 +55,43 @@
 
   &__text {
     width: 100%;
-    padding: 8px 21px;
+    padding: rem(8px) rem(21px);
     color: #2f3234;
     border-radius: 5px;
     border: solid 1px #d1cfcb;
     outline: none;
 
     &:focus {
-      border: solid 2px #f9b43b;
-      padding: 7px 20px;
+      border: solid rem(2px) #f9b43b;
+      padding: rem(7px) rem(20px);
     }
   }
 
   &__text-textarea {
-    height: 107px;
+    height: rem(107px);
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
 
   &__buttons-row {
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
+    width: 100%;
+    @include phones {
+      text-align: center;
+    }
+
 
     &:last-child {
-      margin-bottom: 20px;
+      margin-bottom: rem(20px);
     }
   }
 }
 
 .switch-control {
-  margin-right: 16px;
+  margin-right: rem(16px);
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -79,13 +101,13 @@
   }
 
   &__title {
-    margin-left: 8px;
+    margin-left: rem(8px);
   }
 
   &__elem {
     appearance: none;
     display: inline-block;
-    margin-right: -15px;
+    margin-right: rem(-15px);
     outline: none;
     width: 15px;
     height: 15px;
@@ -102,7 +124,7 @@
  
     &__radio-elem {
     width: 15px;
-    height: 15px;
+    height:15px;
     border-radius: 50%;
     background-color: #ffffff;
     display: inline-flex;

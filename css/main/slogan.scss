@@ -1,10 +1,22 @@
 .slogan {
   width: 48%;
-  margin-left: 10px;
+  margin-left: rem(10px);
+  flex: 1;
+
+  @include laptop {
+    width: 85%;
+    text-align: center;
+    margin: 0;
+  }
+  @include phones {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 
   .slogan__text {
     color: $white;
-    font-size: 65px;
+    font-size: rem(65px);
     text-transform: lowercase;
     line-height: 1;
     @include lifehack();

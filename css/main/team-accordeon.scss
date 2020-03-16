@@ -3,6 +3,9 @@
   &__list {
     display: flex;
     flex-direction: column;
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -15,8 +18,8 @@
 
     h4 {
       @include gagalin();
-      font-size: 14px;
-      margin-bottom: 10px;
+      font-size: rem(14px);
+      margin-bottom: rem(10px);
 
       &::before {
         content: "";
@@ -27,7 +30,7 @@
         border-left: 4.5px solid transparent;
         border-right: 4.5px solid transparent;
         border-bottom: none;
-        margin-right: 10px;
+        margin-right: rem(10px);
       }
     }
   }
@@ -37,13 +40,22 @@
     overflow: hidden;
     display: inline-flex;
     align-items: center;
-    padding-left: 19px;
+    padding-left: rem(19px);
+
+    @include tablets {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__left-col {
-    margin-right: 19px;
-    width: 100px;
+    margin-right: rem(19px);
+    width: rem(100px);
     height: 100%;
+
+    @include tablets {
+      margin: 0 0 rem(10px);
+    }
   }
 
   &__pic {
@@ -60,23 +72,27 @@
     display: flex;
     flex-direction: column;
 
+    @include tablets {
+      width: 60%;
+    }
+
     h5 {
       @include ubuntu(bold);
-      font-size: 14px;
+      font-size: rem(14px);
       height: 100%;
-      margin-bottom: 13px;
+      margin-bottom: rem(13px);
     }
 
     p {
       @include ubuntu();
-      font-size: 14px;
+      font-size: rem(14px);
       line-height: 1.71;
       height: 100%;
     }
   }
 
   &__item_active {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     height: initial;
 
     .team-accordeon {
@@ -97,3 +113,4 @@
     }
   }
 }
+

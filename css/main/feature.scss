@@ -5,6 +5,9 @@
   &__list {
     display: flex;
     justify-content: center;
+    @include phones {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -13,31 +16,46 @@
     justify-content: flex-start;
     align-items: center;
     flex: 1;
-    margin-right: 19px;
+    margin-right: rem(19px);
     text-align: center;
-
+    @include phones {
+      flex-direction: row;
+      text-align: left;
+      margin: 0 0 rem(45px);
+    }
+    
+    
     &:last-child {
       margin-right: 0;
     }
   }
-
+  
   &__pic {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      // @include phones {
+      //   flex-direction: row;
+      //   text-align: left;
+      // }
   }
 
   &__article {
     color: &black;
+    flex: 1;
 
     h3 {
       @include lifehack();
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: rem(24px);
+      margin-bottom: rem(20px);
       line-height: 1.17;
     }
 
     p {
       @include ubuntu();
-      font-size: 14px;
+      font-size: rem(14px);
       line-height: 1.71;
     }
   }

@@ -6,11 +6,14 @@
 
 html {
   height: 100%;
-  font-size: 16px;
+  font-size: rem(16px);
+  @include phones {
+    font-size: 12px;
+  }
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   background-color: #ffffff;
   height: 100%;
@@ -76,15 +79,26 @@ table {
 .container {
   width: 95%;
   max-width: 980px;
+  @include laptop {
+    max-width: 768px;
+  }
+  @include phones {
+    max-width: 480px;
+  }
+
 }
 
 .section__title {
-  font-size: 72px;
+  font-size: rem(72px);
   line-height: 1.1;
   text-transform: uppercase;
   @include gagalin();
   color: $orange;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
+
+  @include tablets {
+    text-align: center;
+  }
 
   &_center {
     text-align: center;

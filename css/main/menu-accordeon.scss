@@ -25,11 +25,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 40px 22px;
+    padding: rem(40px) rem(22px);
   }
 
   h3 {
-    font-size: 40px;
+    font-size: rem(40px);
     @include gagalin();
     color: $white;
     writing-mode: vertical-lr;
@@ -56,7 +56,11 @@
 
   .menu-accordeon__right-col {
     width: 50vw;
-    padding: 0 35px;
+    padding: 0 rem(35px);
+
+    @include tablets {
+      width: 100%;
+    }
     }
 
   .menu-accordeon__left-col h3 {

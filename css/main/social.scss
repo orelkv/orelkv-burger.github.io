@@ -3,6 +3,9 @@
 .social {
   display: flex;
   justify-content: flex-end;
+  @include phones {
+    justify-content: center;
+  }
 
   &__list {
     display: inline-flex;
@@ -10,7 +13,13 @@
   }
 
   &__item {
-    margin-left: 17px;
+    margin-left: rem(20px);
+    &:first-child {
+      @include phones {
+        margin-left: 0;
+      }
+    
+    }
   }
 
   &__pic {
@@ -19,7 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1px;
+    border-radius:1px;
 
     &:hover {
       background-color: #ffffff;

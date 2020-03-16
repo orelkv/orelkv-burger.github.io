@@ -5,8 +5,12 @@
   transform: translateY(-50%);
   right: 4%;
 
+  @include laptop {
+    display: none;
+  }
+
   &__link {
-    padding: 0 9px;
+    padding: 0 rem(9px);
     position: relative;
   }
 

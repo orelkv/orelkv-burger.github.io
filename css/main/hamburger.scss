@@ -1,0 +1,44 @@
+.hamburger {
+  width: 25px;
+  height: 25px; 
+  position: relative;
+  display: none;
+
+  @include laptop {
+    display: block;
+    margin-left: rem(30px);
+  }
+
+  &__elem {
+  width: 25px;
+  height: 4px; 
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #ffffff;
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 4px; 
+      border-radius: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%)
+  }
+
+    &:after {
+    content: "";
+    width: 25px;
+    height: 4px; 
+      border-radius: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 91%;
+    left: 0;
+    transform: translateY(-50%)
+  }
+  } 
+}

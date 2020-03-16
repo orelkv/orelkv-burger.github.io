@@ -13,10 +13,19 @@
     top: 0;
     right: 0;
     z-index: 1;
+
+    @include tablets {
+      width: 100%;
+    }
   }
   &__container {
     position: relative;
     height: 100%;
+    @include tablets {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__content {
@@ -29,5 +38,12 @@
     align-items: center;
     padding: 0 0 0 9%;
     z-index: 2;
+
+    @include tablets {
+      width: 100%;
+      padding: initial;
+      position: relative;
+      justify-content: center;
+    }
   }
 }
