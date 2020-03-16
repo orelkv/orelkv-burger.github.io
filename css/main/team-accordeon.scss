@@ -60,7 +60,7 @@
 
   &__left-col {
     margin-right: rem(19px);
-    width: rem(180px);
+    // width: rem(180px);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@
   }
 
   &__pic {
-    width: rem(115px);
+    width: rem(100px);
     height: 0;
     border-radius: 50%;
     overflow: hidden;
@@ -125,7 +125,7 @@
     .team-accordeon {
 
       &__pic {
-        height: rem(115px);
+        height: rem(100px);
       }
 
       &__text {
