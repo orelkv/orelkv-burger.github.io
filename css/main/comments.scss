@@ -109,10 +109,13 @@
       position: absolute;
       top: 0;
       right: 50%;
+      display: none;
       transform: translateX(50%);
-      display: block;
       font-size: rem(15px);
       white-space: nowrap;
+      @include phones {
+        display: block;
+      }
     }    
   }  
 }
