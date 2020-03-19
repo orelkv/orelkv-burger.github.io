@@ -19,9 +19,3 @@
     width: 100%;
   }
 }
-
-.section__title-order {
-  @include phones {
-    font-size: rem(56px);
-  }
-}

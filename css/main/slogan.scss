@@ -1,6 +1,6 @@
 .slogan {
   width: 48%;
-  margin-left: rem(10px);
+  margin-left: rem(25px);
   flex: 1;
 
   @include laptop {
@@ -31,5 +31,6 @@
 .section__title_hero-tablets {
   @include phones {
     margin-bottom: rem(5px);
+    font-size: rem(74px);
   }
 }

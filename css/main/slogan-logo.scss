@@ -8,6 +8,13 @@
     width: 100%;
     flex: 1;
 
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+
     @include phones {
       width: 83%;
       margin-bottom: rem(42px);

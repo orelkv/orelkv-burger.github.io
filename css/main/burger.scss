@@ -1,0 +1,56 @@
+.burger {
+  background-image: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
+
+
+  &__container {
+    display: flex;
+    align-items: center;
+    @include tablets {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      align-items: center;
+    }
+    @include phones {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: rem(48px);
+    transform: translateY(-50%);
+
+    &_right {
+      right: rem(48px);
+      left: initial;
+    }
+  }
+
+  &__nav {
+    transform: rotate(90deg);
+    width: rem(29px);
+    height: rem(16px);
+
+    &_right {
+      transform: rotate(-90deg);
+    }
+  }
+}
+.section__title-burger {
+  padding: 0 rem(10px);
+}

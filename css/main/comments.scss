@@ -3,6 +3,7 @@
 
   &__details {
     position: relative;
+    display: block;
   }
 
   &__list {
@@ -68,6 +69,14 @@
     opacity: 0;
     transform: scale(.7);
     padding: 0 rem(20px);
+    @include tablets {
+      padding: 0 rem(40px);
+    }
+
+    @include tablets {
+      text-align: center;
+      align-items: center;
+    }
 
     @include phones {
       align-items: center;

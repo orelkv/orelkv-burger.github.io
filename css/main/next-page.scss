@@ -1,3 +1,7 @@
 .next-page {
   margin-bottom: 4vh;
+  &__img {
+    width: rem(29px);
+    height: rem(14px);
+  }
 }

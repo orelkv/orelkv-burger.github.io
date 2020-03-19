@@ -19,6 +19,9 @@
     display: inline-flex;
     background-size: auto 100%;
     background-position-x: 100%;
+    :hover {
+      cursor: pointer;
+    }
   }
 
   &__left-col {
@@ -57,6 +60,7 @@
     align-items: center;
     background-color: rgb(47, 50, 52);
     opacity: 0.929;
+    transition: all .5s;
 
     p {
       @include ubuntu();

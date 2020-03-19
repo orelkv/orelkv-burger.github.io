@@ -1,0 +1,57 @@
+.burger {
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: rem(30px);
+
+    @include tablets {
+      text-align: center;
+      padding-top: 0;
+    }
+
+    p {
+      @include ubuntu();
+      font-size: rem(14px);
+      color: #ffffff;
+      line-height: 1.714;
+      margin-bottom: rem(21px);
+
+      @include tablets {
+        margin-bottom: rem(30px);
+      }
+      
+      @include phones {
+        font-size: 15px;
+        margin-bottom: rem(13px);
+      }
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    align-items: flex-end;
+    color: $red;
+
+    @include tablets {
+      align-self: center;
+    }
+  }
+
+  &__sum {
+    @include gagalin();
+    font-size: rem(70px);
+    line-height: 1;
+
+    @include phones {
+      font-size: 47px;
+    }
+  }
+
+  &__currensy {
+    @include gagalin();
+    font-size: rem(30px);
+    margin-right: rem(29px);
+    line-height: 1;
+  }
+  }

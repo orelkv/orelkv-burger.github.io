@@ -16,6 +16,11 @@
     font-size: rem(14px);
     color: #ffffff;
 
+    &:first-child {
+      margin-left: 0;
+    }
+
+
     @include tablets {
       margin: 0;
       width: 66%;
@@ -30,9 +35,6 @@
     }
   }
 
-  &:first-child {
-    margin-left: 0;
-  }
 
 
   &__row {

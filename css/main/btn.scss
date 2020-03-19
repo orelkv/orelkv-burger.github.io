@@ -7,6 +7,9 @@
     text-align: center;
     display: inline-block;
     color: #ffffff;
+    @include phones {
+      font-size: rem(15px);
+    }
 
     &_red {
       background-color: $red;
