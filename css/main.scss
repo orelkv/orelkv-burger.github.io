@@ -2,7 +2,6 @@ $white: #ffffff;
 $orange: #f9b43b;
 $red: #e45028;
 $black: #2f3234;
-$grey: #2f3234;
 
 
 @import "layout/font.scss";
@@ -36,3 +35,7 @@ $grey: #2f3234;
 @import "main/burger.scss";
 @import "main/burger-left.scss";
 @import "main/burger-right.scss";
+@import "main/close.scss";
+@import "main/overlay.scss";
+@import "main/composition.scss";
+@import "main/mass.scss";

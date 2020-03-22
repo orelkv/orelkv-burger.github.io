@@ -12,7 +12,6 @@
 <body>
   <div class="wrapper">
 
-
     <div class="section hero">
       <aside class="aside">
         <ul class="aside__list">
@@ -52,6 +51,9 @@
           </svg>
           <div class="header__menu">
             <nav class="menu">
+              <svg class="close menu__close" preserveAspectRatio="xMidYMid meet">
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
               <ul class="menu__list">
                 <li class="menu__item">
                   <a href="#" class="menu__link">О нас</a>
@@ -76,7 +78,7 @@
                 </li>
               </ul>
             </nav>
-            <button class="btn btn_red" type="submit">Заказать</button>
+            <a class="btn btn_red" href="#order">Заказать</a>
             <div class="hamburger">
               <div class="hamburger__elem"></div>
             </div>
@@ -151,15 +153,75 @@
         <div class="burger__content">
           <div class="burger__left-col">
             <img src="./img/food/burger-black.png" alt="" class="burger__img">
-            <div class="burger__compos">
-              <svg class="burger__compos-icon" preserveAspectRatio="xMidYMid meet">
+            <div class="composition">
+              <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="sprite.svg#burger"></use>
               </svg>
-              <span class="burger__compos-text">Состав</span>
-
+              <span class="composition__title">Состав</span>
+              <div class="composition__content">
+                <table class="composition__table">
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#beef"></use>
+                      </svg>
+                    </td>
+                    <td>Говядина</td>
+                    <td>300 г</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#buns"></use>
+                      </svg>
+                    </td>
+                    <td>Булочки</td>
+                    <td>100 г</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#salad"></use>
+                      </svg>
+                    </td>
+                    <td>Зелень</td>
+                    <td>70 г</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#sauce"></use>
+                      </svg>
+                    </td>
+                    <td>Соус</td>
+                    <td>150 г</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#cucumber"></use>
+                      </svg>
+                    </td>
+                    <td>Овощи</td>
+                    <td>200 г</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="sprite.svg#cheese"></use>
+                      </svg>
+                    </td>
+                    <td>Сыр</td>
+                    <td>80 г</td>
+                  </tr>
+                </table>
+                <svg class="close composition__close" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="sprite.svg#close"></use>
+                </svg>  
+              </div>
             </div>
-            <div class="burger__mass">
-              <svg class="burger__mass-icon" preserveAspectRatio="xMidYMin meet">
+            <div class="mass">
+              <svg class="mass__icon" preserveAspectRatio="xMidYMin meet">
                 <use xlink:href="sprite.svg#kkal"></use>
               </svg>
             </div>
@@ -181,11 +243,11 @@
           </div>
         </div>
       </div>
-          <div class="burger__btn burger__btn_right">
-            <svg class="burger__nav burger__nav_right" preserveAspectRatio="xMidYMid meet">
-              <use xlink:href="sprite.svg#arrow-scroll"></use>
-            </svg>
-          </div>
+      <div class="burger__btn burger__btn_right">
+        <svg class="burger__nav burger__nav_right" preserveAspectRatio="xMidYMid meet">
+          <use xlink:href="sprite.svg#arrow-scroll"></use>
+        </svg>
+      </div>
     </div>
 
 
@@ -583,7 +645,8 @@
       </footer>
     </div>
   </div>
-  <script src="animation.js" type="application/javascript"></script>
+  <script src="animation/menu.js" type="text/javascript" defer></script>
+  <script src="animation/composition.js" type="text/javascript" defer></script>
 </body>
 
 </html>

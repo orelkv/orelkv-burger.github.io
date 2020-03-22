@@ -1,10 +1,10 @@
 .burger {
-  background-image: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
-
+  background-image: linear-gradient(to top, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
 
   &__container {
     display: flex;
     align-items: center;
+
     @include tablets {
       justify-content: center;
     }
@@ -20,6 +20,7 @@
       width: 80%;
       align-items: center;
     }
+
     @include phones {
       width: 100%;
     }
@@ -51,6 +52,7 @@
     }
   }
 }
+
 .section__title-burger {
   padding: 0 rem(10px);
 }

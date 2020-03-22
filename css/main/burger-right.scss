@@ -22,7 +22,7 @@
       }
       
       @include phones {
-        font-size: 15px;
+        font-size: rem(15px);
         margin-bottom: rem(13px);
       }
     }
@@ -44,7 +44,7 @@
     line-height: 1;
 
     @include phones {
-      font-size: 47px;
+      font-size: rem(47px);
     }
   }
 

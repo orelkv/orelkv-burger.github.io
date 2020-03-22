@@ -1,4 +1,10 @@
 .logo {
   max-width: rem(92px);
   max-height: rem(69px);
+  &_overlay {
+    top: rem(13px);
+    left: rem(23px);
+    position: absolute;
+    z-index: 9999;
+  }
 }
