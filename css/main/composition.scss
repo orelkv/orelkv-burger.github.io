@@ -20,6 +20,12 @@
       display: flex;
     }
   }
+  // @include tablets {
+  //   background-color: #f08c33;
+  //   .composition__content {
+  //     display: none;
+  //   }
+  // }
 
   @include tablets {
     left: 0;
@@ -28,6 +34,16 @@
   @include phones {
     width: rem(100px);
     height: rem(100px);
+  }
+
+  &_open {
+    @include tablets {
+      background-color: rgb(227, 80, 40);
+
+      .composition__content {
+        display: flex;
+      }
+    }
   }
 
   &__icon {
@@ -81,22 +97,6 @@
 
     td:first-child {
       width: 31%;
-    }
-
-  }
-
-  &__close {
-    position: absolute;
-    top: 6%;
-    right: 10%;
-    display: none;
-    transform: translateY(-50%);
-    transform: translateX(50%);
-    stroke: #eb8262;
-    z-index: 9999;
-
-    @include tablets {
-      display: block;
     }
   }
 }

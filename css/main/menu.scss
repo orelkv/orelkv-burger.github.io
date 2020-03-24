@@ -1,84 +1,84 @@
 .header__menu {
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   @include ubuntu(medium);
+  flex: 1;
+  margin-right: rem(12px);
+  z-index: 8888;
 }
 
 .menu {
   font-size: rem(13px);
   text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
 
   @include laptop {
     display: none;
-    position: absolute;
+  }
+  
+  &_overlay {
+    position: fixed;
+    display: flex;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
-    z-index: 9999;
+    right: 0;
     font-size: rem(23px);
     align-items: center;
     justify-content: center;
+    background-color: $black;
+    opacity: 0.99;
   }
 
-  &__close {
-    top: rem(31px);
-    right: rem(32px);
-    display: none;
-    @include laptop {
-      display: inline-block;
-    }
-  }
-
-  .menu__list {
+  &__list {
     display: inline-flex;
     align-items: center;
-    margin-right: rem(12px);
 
     @include laptop {
       flex-direction: column;
       justify-content: center;
       margin-right: 0;
     }
+  }
 
-    .menu__item {
-      margin-right: rem(16px);
-      display: inline-flex;
-      align-items: center;
+  &__item {
+    margin-right: rem(16px);
+    display: inline-flex;
+    align-items: center;
+
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: rem(22px);
+    }
+
+    &:after {
+      content: "";
+      width: rem(4px);
+      height: rem(4px);
+      border-radius: 50%;
+      background-color: currentColor;
+      margin-left: rem(15px);
 
       @include laptop {
-        display: flex;
-        flex-direction: column;
-        margin-right: 0;
-        margin-bottom: rem(22px);
+        margin-left: 0;
+        margin-top: rem(19px);
+        width: rem(7px);
+        height: rem(7px);
       }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
 
       &:after {
-        content: "";
-        width: rem(4px);
-        height: rem(4px);
-        border-radius: 50%;
-        background-color: currentColor;
-        margin-left: rem(15px);
-
-        @include laptop {
-          margin-left: 0;
-          margin-top: rem(19px);
-          width: rem(7px);
-          height: rem(7px);
-        }
-      }
-
-      &:last-child {
         margin-right: 0;
-        margin-bottom: 0;
-
-        &:after {
-          margin-right: 0;
-          display: none;
-          margin-top: 0;
-        }
+        display: none;
+        margin-top: 0;
       }
     }
   }

@@ -1,17 +1,17 @@
-const composClos = document.querySelector('.composition__close');
-const composContent = document.querySelector('.composition__content');
-const compos = document.querySelector('.composition');
-
-// compos.addEventListener('click', function () {
-//   composContent.removeAttribute('style');
-//   compos.removeAttribute('style');
-//   composContent.style.display = 'flex';
-//   compos.style.backgroundColor = 'rgb(227, 80, 40)';
-// });
-
-composClos.addEventListener('click', function () {
-  composContent.style.display = 'none';
-  compos.style.backgroundColor = '#f08c33';
-  // compos.removeAttribute('style');
-  // composContent.removeAttribute('style');
+document.addEventListener('DOMContentLoaded', function () {
+  openCompos();
 });
+
+function openCompos() {
+  var compos = document.querySelector('.composition');
+  var composClose = document.querySelector('.close__composition');
+ 
+  compos.addEventListener ('click', function () {
+      compos.classList.add('composition_open');
+  });
+  composClose.addEventListener ('click', function () {
+    if (compos.classList.contains('composition_open')) {
+      compos.classList.remove('composition_open');
+    }
+  })
+}

@@ -1,11 +1,39 @@
 .close {
- stroke: #ffffff;
- fill: transparent;
- stroke-opacity: 0.702;
- stroke-width: 4px;
- stroke-linecap: square;
- position: absolute;
- width: 20px;
- height: 20px;
- cursor: pointer;
+  stroke: #ffffff;
+  fill: transparent;
+  stroke-opacity: 0.702;
+  stroke-width: 4px;
+  stroke-linecap: square;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  &__menu {
+    top: rem(36px);
+    right: rem(29px);
+
+    &_active {
+      display: inline-block;
+      z-index: 8888;
+    }
+  }
+
+  &__composition {
+    position: absolute;
+    top: 6%;
+    right: 10%;
+    display: none;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+    stroke: #eb8262;
+    z-index: 9999;
+
+    @include tablets {
+      display: block;
+    }
+  }
 }
+
+
