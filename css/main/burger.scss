@@ -1,28 +1,39 @@
 .burger {
   background-image: linear-gradient(to top, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+  flex-direction: row;
 
   &__container {
     display: flex;
     align-items: center;
-
+    width: 89%;
+    
     @include tablets {
       justify-content: center;
     }
   }
 
+  &__wrap {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    right: 100%;
+    width: 300%;
+    transition: right, 1s;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
+    flex: 1;
 
     @include tablets {
       flex-direction: column;
       justify-content: center;
-      width: 80%;
       align-items: center;
-    }
-
-    @include phones {
-      width: 100%;
     }
   }
 
@@ -30,15 +41,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: rem(48px);
+    margin-left: rem(60px);
+    cursor: pointer;
+
     transform: translateY(-50%);
 
     &_right {
-      right: rem(48px);
-      left: initial;
+      margin-left: 0;
+      margin-right: rem(60px);
     }
   }
 
@@ -54,5 +64,5 @@
 }
 
 .section__title-burger {
-  padding: 0 rem(10px);
+  padding: 0 rem(20px);
 }

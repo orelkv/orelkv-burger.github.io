@@ -8,6 +8,8 @@
     overflow: hidden;
     margin-right: rem(30px);
     padding: rem(73px) 0;
+    flex: 1;
+
 
     @include tablets {
       margin-right: 0;
@@ -27,6 +29,11 @@
       left: 0;
       width: 100%;
       padding-top: 100%;
+    }
+  }
+  &__img {
+    @include phones {
+      max-width: 80%;
     }
   }
 }

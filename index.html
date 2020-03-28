@@ -81,7 +81,7 @@
           </div>
           <a class="btn btn_red" href="#order">Заказать</a>
           <div class="hamburger">
-              <div class="hamburger__elem"></div>
+            <div class="hamburger__elem"></div>
           </div>
         </header>
         <div class="hero__content">
@@ -150,95 +150,283 @@
         </svg>
       </div>
       <div class="container burger__container">
-        <div class="burger__content">
-          <div class="burger__left-col">
-            <img src="./img/food/burger-black.png" alt="" class="burger__img">
-            <div class="composition">
-              <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                <use xlink:href="sprite.svg#burger"></use>
-              </svg>
-              <span class="composition__title">Состав</span>
-              <div class="composition__content">
-                <table class="composition__table">
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#beef"></use>
-                      </svg>
-                    </td>
-                    <td>Говядина</td>
-                    <td>300 г</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#buns"></use>
-                      </svg>
-                    </td>
-                    <td>Булочки</td>
-                    <td>100 г</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#salad"></use>
-                      </svg>
-                    </td>
-                    <td>Зелень</td>
-                    <td>70 г</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#sauce"></use>
-                      </svg>
-                    </td>
-                    <td>Соус</td>
-                    <td>150 г</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#cucumber"></use>
-                      </svg>
-                    </td>
-                    <td>Овощи</td>
-                    <td>200 г</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
-                        <use xlink:href="sprite.svg#cheese"></use>
-                      </svg>
-                    </td>
-                    <td>Сыр</td>
-                    <td>80 г</td>
-                  </tr>
-                </table>
-                <svg class="close close__composition" preserveAspectRatio="xMidYMid meet">
-                  <use xlink:href="sprite.svg#close"></use>
-                </svg>  
+        <div class="burger__wrap">
+          <div class="burger__slider">
+            <div class="burger__content">
+              <div class="burger__left-col">
+                <img src="./img/food/burger-black.png" alt="" class="burger__img">
+                <div class="composition">
+                  <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                    <use xlink:href="sprite.svg#burger"></use>
+                  </svg>
+                  <span class="composition__title">Состав</span>
+                  <div class="composition__content">
+                    <table class="composition__table">
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#beef"></use>
+                          </svg>
+                        </td>
+                        <td>Говядина</td>
+                        <td>300 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#buns"></use>
+                          </svg>
+                        </td>
+                        <td>Булочки</td>
+                        <td>100 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#salad"></use>
+                          </svg>
+                        </td>
+                        <td>Зелень</td>
+                        <td>70 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#sauce"></use>
+                          </svg>
+                        </td>
+                        <td>Соус</td>
+                        <td>150 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cucumber"></use>
+                          </svg>
+                        </td>
+                        <td>Овощи</td>
+                        <td>200 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cheese"></use>
+                          </svg>
+                        </td>
+                        <td>Сыр</td>
+                        <td>80 г</td>
+                      </tr>
+                    </table>
+                    <svg class="close close__composition" preserveAspectRatio="xMidYMid meet">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mass">
+                  <svg class="mass__icon" preserveAspectRatio="xMidYMin meet">
+                    <use xlink:href="sprite.svg#kkal"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="burger__right-col">
+                <h2 class="section__title section__title_white section__title-burger">
+                  Dark Beef Burger
+                </h2>
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                  эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                  чураско.
+                </p>
+                <div class="burger__price">
+                  <span class="burger__sum">500</span>
+                  <span class="burger__currensy">рублей</span>
+                  <a href="#order" class="btn btn_red">Заказать</a>
+                </div>
               </div>
             </div>
-            <div class="mass">
-              <svg class="mass__icon" preserveAspectRatio="xMidYMin meet">
-                <use xlink:href="sprite.svg#kkal"></use>
-              </svg>
+            <div class="burger__content">
+              <div class="burger__left-col">
+                <img src="./img/food/burger_sandwich.png" alt="" class="burger__img">
+                <div class="composition">
+                  <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                    <use xlink:href="sprite.svg#burger"></use>
+                  </svg>
+                  <span class="composition__title">Состав</span>
+                  <div class="composition__content">
+                    <table class="composition__table">
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#beef"></use>
+                          </svg>
+                        </td>
+                        <td>Говядина</td>
+                        <td>300 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#buns"></use>
+                          </svg>
+                        </td>
+                        <td>Булочки</td>
+                        <td>100 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#salad"></use>
+                          </svg>
+                        </td>
+                        <td>Зелень</td>
+                        <td>70 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#sauce"></use>
+                          </svg>
+                        </td>
+                        <td>Соус</td>
+                        <td>150 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cucumber"></use>
+                          </svg>
+                        </td>
+                        <td>Овощи</td>
+                        <td>200 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cheese"></use>
+                          </svg>
+                        </td>
+                        <td>Сыр</td>
+                        <td>80 г</td>
+                      </tr>
+                    </table>
+                    <svg class="close close__composition" preserveAspectRatio="xMidYMid meet">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mass">
+                  <svg class="mass__icon" preserveAspectRatio="xMidYMin meet">
+                    <use xlink:href="sprite.svg#kkal"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="burger__right-col">
+                <h2 class="section__title section__title_white section__title-burger">
+                  Sandwich Burger
+                </h2>
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                  эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                  чураско.
+                </p>
+                <div class="burger__price">
+                  <span class="burger__sum">400</span>
+                  <span class="burger__currensy">рублей</span>
+                  <a href="#order" class="btn btn_red">Заказать</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="burger__right-col">
-            <h2 class="section__title section__title_white section__title-burger">
-              Dark Beef Burger
-            </h2>
-            <p>
-              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
-              эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
-              чураско.
-            </p>
-            <div class="burger__price">
-              <span class="burger__sum">500</span>
-              <span class="burger__currensy">рублей</span>
-              <a href="#order" class="btn btn_red">Заказать</a>
+            <div class="burger__content">
+              <div class="burger__left-col">
+                <img src="./img/food/Burger-snake.png" alt="" class="burger__img">
+                <div class="composition">
+                  <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                    <use xlink:href="sprite.svg#burger"></use>
+                  </svg>
+                  <span class="composition__title">Состав</span>
+                  <div class="composition__content">
+                    <table class="composition__table">
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#beef"></use>
+                          </svg>
+                        </td>
+                        <td>Говядина</td>
+                        <td>300 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#buns"></use>
+                          </svg>
+                        </td>
+                        <td>Булочки</td>
+                        <td>100 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#salad"></use>
+                          </svg>
+                        </td>
+                        <td>Зелень</td>
+                        <td>70 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#sauce"></use>
+                          </svg>
+                        </td>
+                        <td>Соус</td>
+                        <td>150 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cucumber"></use>
+                          </svg>
+                        </td>
+                        <td>Овощи</td>
+                        <td>200 г</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <svg class="composition__icon" preserveAspectRatio="xMidYMid meet">
+                            <use xlink:href="sprite.svg#cheese"></use>
+                          </svg>
+                        </td>
+                        <td>Сыр</td>
+                        <td>80 г</td>
+                      </tr>
+                    </table>
+                    <svg class="close close__composition" preserveAspectRatio="xMidYMid meet">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mass">
+                  <svg class="mass__icon" preserveAspectRatio="xMidYMin meet">
+                    <use xlink:href="sprite.svg#kkal"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="burger__right-col">
+                <h2 class="section__title section__title_white section__title-burger">
+                  Snake Burger
+                </h2>
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                  эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                  чураско.
+                </p>
+                <div class="burger__price">
+                  <span class="burger__sum">350</span>
+                  <span class="burger__currensy">рублей</span>
+                  <a href="#order" class="btn btn_red">Заказать</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -261,76 +449,68 @@
             <div class="team-accordeon">
               <ul class="team-accordeon__list">
                 <li class="team-accordeon__item">
-                  <section class="team-accordeon__text">
-                    <h4>Дэниэл Редклиф</h4>
-                    <div class="team-accordeon__section">
-                      <div class="team-accordeon__left-col">
-                        <div class="team-accordeon__pic">
-                          <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
-                        </div>
+                  <h4 class='team-accordeon__title'>Дэниэл Редклиф</h4>
+                  <div class="team-accordeon__section">
+                    <div class="team-accordeon__left-col">
+                      <div class="team-accordeon__pic">
+                        <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
                       </div>
-                      <article class="team-accordeon__right-col">
-                        <h5>Оператор</h5>
-                        <p>
-                          С радостью поможем подобрать идеальный бургер и оформить заказ.
-                        </p>
-                      </article>
                     </div>
-                  </section>
-                </li>
-                <li class="team-accordeon__item team-accordeon__item_active">
-                  <section class="team-accordeon__text">
-                    <h4>Ричард Джеймс</h4>
-                    <div class="team-accordeon__section">
-                      <div class="team-accordeon__left-col">
-                        <div class="team-accordeon__pic">
-                          <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
-                        </div>
-                      </div>
-                      <article class="team-accordeon__right-col">
-                        <h5>Оператор</h5>
-                        <p>
-                          С радостью поможем подобрать идеальный бургер и оформить заказ.
-                        </p>
-                      </article>
-                    </div>
-                  </section>
+                    <article class="team-accordeon__right-col">
+                      <h5>Оператор</h5>
+                      <p>
+                        С радостью поможем подобрать идеальный бургер и оформить заказ.
+                      </p>
+                    </article>
+                  </div>
                 </li>
                 <li class="team-accordeon__item">
-                  <section class="team-accordeon__text">
-                    <h4>Джейк Финн</h4>
-                    <div class="team-accordeon__section">
-                      <div class="team-accordeon__left-col team-accordeon__left-col_active">
-                        <div class="team-accordeon__pic">
-                          <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
-                        </div>
+                  <h4 class='team-accordeon__title'>Ричард Джеймс</h4>
+                  <div class="team-accordeon__section">
+                    <div class="team-accordeon__left-col">
+                      <div class="team-accordeon__pic">
+                        <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
                       </div>
-                      <article class="team-accordeon__right-col">
-                        <h5>Оператор</h5>
-                        <p>
-                          С радостью поможем подобрать идеальный бургер и оформить заказ.
-                        </p>
-                      </article>
                     </div>
-                  </section>
+                    <article class="team-accordeon__right-col">
+                      <h5>Оператор</h5>
+                      <p>
+                        С радостью поможем подобрать идеальный бургер и оформить заказ.
+                      </p>
+                    </article>
+                  </div>
                 </li>
                 <li class="team-accordeon__item">
-                  <section class="team-accordeon__text">
-                    <h4>Николай Иванов</h4>
-                    <div class="team-accordeon__section">
-                      <div class="team-accordeon__left-col">
-                        <div class="team-accordeon__pic">
-                          <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
-                        </div>
+                  <h4 class='team-accordeon__title'>Джейк Финн</h4>
+                  <div class="team-accordeon__section">
+                    <div class="team-accordeon__left-col team-accordeon__left-col_active">
+                      <div class="team-accordeon__pic">
+                        <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
                       </div>
-                      <article class="team-accordeon__right-col">
-                        <h5>Оператор</h5>
-                        <p>
-                          С радостью поможем подобрать идеальный бургер и оформить заказ.
-                        </p>
-                      </article>
                     </div>
-                  </section>
+                    <article class="team-accordeon__right-col">
+                      <h5>Оператор</h5>
+                      <p>
+                        С радостью поможем подобрать идеальный бургер и оформить заказ.
+                      </p>
+                    </article>
+                  </div>
+                </li>
+                <li class="team-accordeon__item">
+                  <h4 class='team-accordeon__title'>Николай Иванов</h4>
+                  <div class="team-accordeon__section">
+                    <div class="team-accordeon__left-col">
+                      <div class="team-accordeon__pic">
+                        <img src="./img/team/aphex.jpg" alt="" class="team-accordeon__img">
+                      </div>
+                    </div>
+                    <article class="team-accordeon__right-col">
+                      <h5>Оператор</h5>
+                      <p>
+                        С радостью поможем подобрать идеальный бургер и оформить заказ.
+                      </p>
+                    </article>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -346,7 +526,7 @@
         <ul class="menu-accordeon__list">
           <li class="menu-accordeon__item menu-accordeon__item_meet">
             <div class="menu-accordeon__left-col">
-              <h3>Для мясоедов</h3>
+              <h3 class="menu-accordeon__title">Для мясоедов</h3>
             </div>
             <div class="menu-accordeon__right-col">
               <p>
@@ -365,7 +545,7 @@
           </li>
           <li class="menu-accordeon__item menu-accordeon__item_vegan">
             <div class="menu-accordeon__left-col">
-              <h3>Вегетарианское</h3>
+              <h3 class="menu-accordeon__title">Вегетарианское</h3>
             </div>
             <div class="menu-accordeon__right-col">
               <p>
@@ -384,7 +564,7 @@
           </li>
           <li class="menu-accordeon__item menu-accordeon__item_diet">
             <div class="menu-accordeon__left-col">
-              <h3>Диетическое</h3>
+              <h3 class="menu-accordeon__title">Диетическое</h3>
             </div>
             <div class="menu-accordeon__right-col">
               <p>
@@ -647,6 +827,9 @@
   </div>
   <script src="animation/menu.js" defer></script>
   <script src="animation/composition.js" defer></script>
+  <script src="animation/team.js" defer></script>
+  <script src="animation/menu-accordeon.js" defer></script>
+  <script src="animation/burger.js" defer></script>
 </body>
 
 </html>

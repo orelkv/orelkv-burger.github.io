@@ -1,17 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
-  openCompos();
+  compositionOpen();
 });
 
-function openCompos() {
-  var compos = document.querySelector('.composition');
-  var composClose = document.querySelector('.close__composition');
- 
-  compos.addEventListener ('click', function () {
-      compos.classList.add('composition_open');
-  });
-  composClose.addEventListener ('click', function () {
-    if (compos.classList.contains('composition_open')) {
-      compos.classList.remove('composition_open');
-    }
-  })
+var compos = document.getElementsByClassName('composition');
+var composClose = document.getElementsByClassName('close__composition');
+
+function compositionOpen() {
+
+  for (var composItem of compos) {
+    composItem.addEventListener('click', openCompos);
+  }
+
+  for (var composBtn of composClose) {
+    composBtn.addEventListener('click', closeCompos)
+  }
 }
+
+
+function openCompos() {
+  var elem = event.currentTarget;
+  for (var composItem of compos) {
+    composItem.classList.remove('composition_open')
+  }
+  elem.classList.add('composition_open');
+}
+
+
+function closeCompos() {
+  event.stopPropagation();
+  var clos = event.currentTarget;
+  var closeParent = clos.parentElement.parentElement;
+  closeParent.classList.remove('composition_open');
+}
+
+
+
+
+

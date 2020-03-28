@@ -13,11 +13,12 @@
     color: $white;
     display: flex;
     flex-direction: column;
-  }
-
-  &__text {
+    margin-bottom: rem(30px);
+    transition: height, 1s;
 
     h4 {
+      cursor: pointer;
+
       @include gagalin();
       font-size: rem(14px);
       margin-bottom: rem(10px);
@@ -29,7 +30,6 @@
       @include phones {
         font-size: rem(28px);
       }
-
 
       &::before {
         content: "";
@@ -51,6 +51,7 @@
     display: inline-flex;
     align-items: center;
     padding-left: rem(19px);
+    transition: height, 1s;
 
     @include tablets {
       flex-direction: column;
@@ -89,7 +90,6 @@
     flex-direction: column;
     font-size: rem(14px);
 
-
     @include tablets {
       width: 70%;
     }
@@ -104,6 +104,7 @@
       @include ubuntu(bold);
       height: 100%;
       margin-bottom: rem(13px);
+
       @include tablets {
         font-size: rem(15px);
       }
@@ -113,6 +114,7 @@
       @include ubuntu();
       line-height: 1.71;
       height: 100%;
+
       @include tablets {
         font-size: rem(15px);
       }
@@ -125,22 +127,19 @@
   }
 
   &__item_active {
-    margin-bottom: rem(35px);
-    height: initial;
 
     .team-accordeon {
 
       &__pic {
         height: rem(100px);
+        transition: height, .3s;
       }
 
-      &__text {
-        h4 {
-          color: $orange;
+      &__title {
+        color: $orange;
 
-          &::before {
-            transform: rotate(180deg);
-          }
+        &::before {
+          transform: rotate(180deg);
         }
       }
 

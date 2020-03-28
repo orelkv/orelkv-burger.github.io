@@ -1,37 +1,30 @@
-// var itemActive = 'menu-accordeon__item_active';
-// var leftCol = document.querySelector('menu-accordeon__left-col');
+document.addEventListener('DOMContentLoaded', function () {
+  menuOpen()
+})
 
-// console.log(leftCol.className);
-// leftCol.classList.add(itemActive);
-// leftCol.parentElement.addEventListener('click', function () {
-//   console.log(itemActive.className);
-// })
+var activeAccordionClass = 'menu-accordeon__item_active';
+var nameLinks = document.getElementsByClassName('menu-accordeon__left-col');
 
-var activeAccordionClass = 'menu-accordeon__item_active'
-var nameLinks = []
-
-// document.addEventListener('DOMContentLoaded',function () {
-//   initAccordion()
-// })
-
-function initAccordion() {
-  nameLinks = document.getElementsByClassName('menu-accordeon__left-col')
-  for (var i = 0; i < nameLinks.length; i++){
-    var nameLink = nameLinks[i]
-    nameLink.addEventListener('click', clickOnName)
+function menuOpen() {
+  for (var nameLink of nameLinks) {
+    nameLink.addEventListener('click', clickOn)
   }
-}
-function clickOnName(e) {
-  e.preventDefault()
-  var element = e.target
-  var parentElement = element.parentElement
-  if (parentElement.classList.contains(menuAccordeonItemActive)){
-    parentElement.classList.remove(menuAccordeonItemActive)
+};
+
+function clickOn(e) {
+  e.preventDefault;
+  var elem = e.currentTarget;
+  var title = elem.parentElement;
+
+  if (title.classList.contains(activeAccordionClass)) {
+    for (var nameLink of nameLinks) {
+      nameLink.parentElement.classList.remove(activeAccordionClass);
+    };
   } else {
-    for (var i = 0; i < nameLinks.length; i++) {
-      var nameLink = nameLinks[i]
-      nameLink.parentElement.classList.remove(menuAccordeonItemActive)
-    }
-    parentElement.classList.add(menuAccordeonItemActive)
+    for (var nameLink of nameLinks) {
+      nameLink.parentElement.classList.remove(activeAccordionClass);
+    };
+    title.classList.add(activeAccordionClass);
   }
 }
+

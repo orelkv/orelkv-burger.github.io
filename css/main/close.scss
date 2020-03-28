@@ -19,21 +19,19 @@
       z-index: 8888;
     }
   }
-
   &__composition {
-    position: absolute;
-    top: 6%;
-    right: 10%;
-    display: none;
-    transform: translateY(-50%);
-    transform: translateX(50%);
     stroke: #eb8262;
-    z-index: 9999;
-
+    flex-shrink: 0;
+    align-self: flex-start;
+    position: relative;
+    display: none;
     @include tablets {
-      display: block;
+      display: inline-block;
+      z-index: 9999;
     }
   }
+
 }
+
 
 

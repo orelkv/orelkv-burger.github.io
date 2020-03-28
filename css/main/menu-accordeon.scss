@@ -18,7 +18,11 @@
   &__item {
     display: inline-flex;
     background-size: auto 100%;
-    background-position-x: 100%;
+
+    &_vegan {
+      background-position-x: 100%;
+    }
+
     :hover {
       cursor: pointer;
     }
@@ -60,7 +64,7 @@
     align-items: center;
     background-color: rgb(47, 50, 52);
     opacity: 0.929;
-    transition: all .5s;
+    transition: all .3s;
 
     p {
       @include ubuntu();
@@ -87,7 +91,6 @@
     .menu-accordeon__right-col p {
       opacity: initial;
     }
-
   }
 }
 

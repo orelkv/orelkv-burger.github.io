@@ -80,16 +80,16 @@ table {
 
 .container {
   width: 95%;
-  max-width: rem(950px);
+  max-width: 950px;
 
   @include tablets {
-    max-width: rem(760px);
+    max-width: 760px;
     width: 93%;
   }
 
   @include phones {
-    max-width: rem(480px);
-    width: 91%;
+    max-width: 480px;
+    width: 100%;
   }
 }
 
