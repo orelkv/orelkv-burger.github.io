@@ -29,7 +29,7 @@ function openCompos() {
 function closeCompos() {
   event.stopPropagation();
   var clos = event.currentTarget;
-  var closeParent = clos.parentElement.parentElement;
+  var closeParent = clos.closest('.composition');
   closeParent.classList.remove('composition_open');
 }
 

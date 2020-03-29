@@ -67,6 +67,13 @@
     &:first-child {
       margin-left: 0;
     }
+
+    @include phones {
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
   }
 
   &__text {

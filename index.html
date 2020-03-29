@@ -697,6 +697,12 @@
 
 
     <section class="section order" id="order">
+      <div class="modal">
+        <div class="modal__content">
+          <div class="modal__message"></div>
+          <button class="btn btn_red modal__btn" type="submit">Закрыть</button>
+        </div>
+      </div>
       <div class="container order__container">
         <h2 class="section__title section__title-order section__title_center">
           Закажите доставку
@@ -707,35 +713,35 @@
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Имя</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="name">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Телефон</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="phone">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Улица</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="street">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Дом</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="house">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Корпус</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="entrance">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Квартира</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="flat">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Этаж</span>
-                  <input type="text" class="form__text">
+                  <input type="text" class="form__text" name="floor">
                 </label>
               </div>
             </div>
@@ -743,30 +749,30 @@
               <div class="form__row form__row-textarea">
                 <label class="form__block form__block-textarea">
                   <span class="form__title">Комментарий</span>
-                  <textarea class="form__text form__text-textarea"></textarea>
+                  <textarea class="form__text form__text-textarea" name="comment"></textarea>
                 </label>
               </div>
               <div class="form__buttons-row">
                 <label class="switch-control">
-                  <input type="radio" class="switch-control__elem" value="yes" name="switch-control__radio">
+                  <input type="radio" name="pay" class="switch-control__elem" value="yes">
                   <span class="switch-control__radio-elem"></span>
                   <span class="switch-control__title">Потребуется сдача</span>
                 </label>
                 <label class="switch-control">
-                  <input type="radio" class="switch-control__elem" value="no" name="switch-control__radio">
+                  <input type="radio" name="pay" class="switch-control__elem" value="no">
                   <span class="switch-control__radio-elem"></span>
                   <span class="switch-control__title">Оплата по карте</span>
                 </label>
               </div>
               <div class="form__buttons-row">
                 <label class="switch-control">
-                  <input type="checkbox" class="switch-control__elem">
+                  <input type="checkbox" name="tinkling" class="switch-control__elem">
                   <span class="switch-control__checkbox-elem"></span>
                   <span class="switch-control__title">Не перезванивать</span>
                 </label>
               </div>
               <div class="form__buttons-row">
-                <button class="btn btn_red" type="submit">Заказать</button>
+                <button class="btn btn_red" id='form__btn' type="submit">Заказать</button>
                 <button class="btn btn_reset" type="reset">Очистить</button>
               </div>
             </div>
@@ -830,6 +836,7 @@
   <script src="animation/team.js" defer></script>
   <script src="animation/menu-accordeon.js" defer></script>
   <script src="animation/burger.js" defer></script>
+  <script src="animation/form.js" defer></script>
 </body>
 
 </html>
