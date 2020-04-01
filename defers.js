@@ -18,7 +18,7 @@ function filter(input, than) {
     }
   }
 
-  return (newArray);
+  return newArray;
 }
 
 try {
