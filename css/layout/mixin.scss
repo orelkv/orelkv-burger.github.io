@@ -2,12 +2,18 @@
   font-family: "ubuntu", Helvetica, sans-serif;
   font-weight: 300;
 
+  
+
   @if $style==normal {
     font-weight: normal;
+
+
   }
 
   @if $style==medium {
     font-weight: 500;
+
+
   }
 
   @if $style==bold {

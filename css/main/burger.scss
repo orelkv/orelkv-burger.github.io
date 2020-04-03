@@ -1,11 +1,9 @@
 .burger {
   background-image: linear-gradient(to top, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
-  flex-direction: row;
 
   &__container {
     display: flex;
     align-items: center;
-    width: 89%;
     
     @include tablets {
       justify-content: center;
@@ -15,14 +13,18 @@
   &__wrap {
     overflow: hidden;
     width: 100%;
-    display: flex;    
+    display: flex;   
+    align-items: center;
+    
+    @include tablets {
+      justify-content: center;
+    } 
   }
 
   &__slider {
     position: relative;
     display: inline-flex;
     width: 100%;
-    transition: right, 1s;
   }
 
   &__content {
@@ -41,14 +43,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-left: rem(60px);
+    margin-left: rem(20px);
     cursor: pointer;
 
     transform: translateY(-50%);
 
     &_right {
       margin-left: 0;
-      margin-right: rem(60px);
+      margin-right: rem(2 0px);
     }
   }
 

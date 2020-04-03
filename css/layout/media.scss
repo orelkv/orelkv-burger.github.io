@@ -3,13 +3,19 @@ $phones: 480px;
 $laptop: 992px;
 
 
-@function rem($px) {
+@function rem($px) { 
   @return $px / 16px + 0rem;
+
+
+
 }
   
 @mixin desktop {
+
+
 	@media screen and (max-width: $desktop) {
-		@content;
+    @content;
+    
 	}
 }
 

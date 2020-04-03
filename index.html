@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
 
-    <div class="section hero">
+    <div class="section hero active">
       <aside class="aside">
         <ul class="aside__list">
           <li class="aside__item">
@@ -144,15 +144,15 @@
 
 
     <div class="section burger" id="burger">
-      <div class="burger__btn burger__btn_left">
-        <svg class="burger__nav" preserveAspectRatio="xMidYMid meet">
-          <use xlink:href="sprite.svg#arrow-scroll"></use>
-        </svg>
-      </div>
       <div class="container burger__container">
+        <a class="burger__btn burger__btn_left">
+          <svg class="burger__nav" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="sprite.svg#arrow-scroll"></use>
+          </svg>
+        </a>
         <div class="burger__wrap">
           <div class="burger__slider">
-            <div class="burger__content">
+            <div class="burger__content active">
               <div class="burger__left-col">
                 <img src="./img/food/burger-black.png" alt="" class="burger__img">
                 <div class="composition">
@@ -430,11 +430,11 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="burger__btn burger__btn_right">
-        <svg class="burger__nav burger__nav_right" preserveAspectRatio="xMidYMid meet">
-          <use xlink:href="sprite.svg#arrow-scroll"></use>
-        </svg>
+        <a class="burger__btn burger__btn_right">
+          <svg class="burger__nav burger__nav_right" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="sprite.svg#arrow-scroll"></use>
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -831,11 +831,17 @@
       </footer>
     </div>
   </div>
+
+  <script src="jquery-compress.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
   <script src="animation/menu.js" defer></script>
   <script src="animation/composition.js" defer></script>
   <script src="animation/team.js" defer></script>
   <script src="animation/menu-accordeon.js" defer></script>
   <script src="animation/burger.js" defer></script>
+  <script src="animation/section.js" defer></script>
   <script src="animation/form.js" defer></script>
 </body>
 
