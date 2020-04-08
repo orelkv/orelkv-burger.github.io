@@ -1,0 +1,36 @@
+.slogan {
+  width: 48%;
+  margin-left:  25px;
+  flex: 1;
+
+  @include laptop {
+    width: 85%;
+    text-align: center;
+    margin: 0;
+  }
+
+  @include phones {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slogan__text {
+    color: $white;
+    font-size:  65px;
+    text-transform: lowercase;
+    line-height: 1;
+    @include lifehack();
+
+    @include phones {
+      font-size:  63px;
+    }
+  }
+}
+
+.section__title_hero-tablets {
+  @include phones {
+    margin-bottom:  5px;
+    font-size:  74px;
+  }
+}

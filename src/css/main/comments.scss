@@ -1,0 +1,126 @@
+.comments {
+  background-color: #000000;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    width: 25%;
+    height: 50%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    @include tablets {
+      width: 50%;
+      height: 25%;
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background-color: #000;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:hover {
+      &:after {
+        opacity: .6;
+        transition: all .3s;
+      }
+
+      .comments__article {
+        opacity: 1;
+        transform: scale(1);
+        transition: all .3s;
+      }
+    }
+  }
+
+  &__img {
+    display: none;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    color: $white;
+    opacity: 0;
+    transform: scale(.7);
+    padding: 0 20px;
+
+    @include tablets {
+      padding: 0 40px;
+    }
+
+    @include tablets {
+      text-align: center;
+      align-items: center;
+    }
+
+    h4 {
+      @include gagalin();
+      margin-bottom: 19px;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      @include phones {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    }
+
+    p {
+      @include ubuntu();
+      margin-bottom: 12px;
+      font-size:  14px;
+      line-height: 1.71;
+
+      @include phones {
+        display: none;
+      }
+    }
+  }
+}
+
+.btn {
+  &__comments {
+    margin-right: 0;
+    @include phones {
+      display: none;
+    }
+
+    &_phones {
+      display: none;
+      font-size:  15px;
+      white-space: nowrap;
+
+      @include phones {
+        display: block;
+      }
+    }
+  }
+}

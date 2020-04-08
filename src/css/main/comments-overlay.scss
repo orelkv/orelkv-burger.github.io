@@ -1,0 +1,45 @@
+.comments {
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f3234;
+    opacity: 92%;
+    position: absolute;
+    z-index: 9999;
+
+    &_open {
+      display: flex;
+    }
+  }
+
+  &__overlay-content {
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  &__overlay-title {
+    @include gagalin();
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @include phones {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__overlay-text {
+    @include ubuntu();
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}

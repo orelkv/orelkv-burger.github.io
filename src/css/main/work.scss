@@ -1,0 +1,10 @@
+.work {
+  background: url('../img/our-work/work-fon.jpg') center center /  cover no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
+}

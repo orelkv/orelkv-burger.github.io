@@ -1,0 +1,100 @@
+.composition {
+  width:  90px;
+  height:  90px;
+  border-radius: 5px;
+  background-color: #f08c33;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+
+  @media (min-width: 769px) {
+  &:hover {
+    background-color: rgb(227, 80, 40);
+
+    .composition__content {
+      display: flex;
+    }
+  }
+}
+
+  @include tablets {
+    left: 0;
+  }
+
+  @include phones {
+    width:  100px;
+    height:  100px;
+  }
+
+  &_open {
+    @include tablets {
+      background-color: rgb(227, 80, 40);
+
+      .composition__content {
+        display: flex;
+      }
+    }
+  }
+
+  &__icon {
+    width:  46px;
+    height:  44px;
+    margin-bottom:  4px;
+  }
+
+  &__title {
+    @include gagalin();
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 270px;
+    min-width:  205px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    opacity: 0.902;
+    font-size: 14px;
+    color: $black;
+    @include ubuntu(medium);
+    display: none;
+    align-items: center;
+    padding: 15% 23%;
+    line-height: 1;
+
+    @include tablets {
+      width: 250px;
+      min-width:  220px;
+      padding: 15% 20% 15% 24%;
+      justify-content: space-between;
+    }
+
+    @include phones {
+      width: 230px;
+      min-width:  200px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    padding: 0;
+
+    td:last-child {
+      text-align: right;
+    }
+
+    td:first-child {
+      width: 31%;
+    }
+  }
+}

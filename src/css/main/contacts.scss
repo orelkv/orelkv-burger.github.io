@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+
+
+  &__address {
+    @include ubuntu();
+    font-size:  14px;
+    color: #ffffff;
+    margin-bottom:  5px;
+
+    @include phones {
+      text-align: center;
+      font-size:  16px;
+    }
+  }
+
+  &__link {
+    @include ubuntu(bold);
+    font-size:  14px;
+    color: $red;
+    display: inline-flex;
+
+    @include phones {
+      justify-content: center;
+      font-size:  18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    align-self: center;
+    display: inline-block;
+    margin-right:  5px;
+  }
+}

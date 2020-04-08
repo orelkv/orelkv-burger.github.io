@@ -1,0 +1,101 @@
+.menu-accordeon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+
+
+  &__list {
+    display: inline-flex;
+    justify-content: flex-end;
+    height: 100%;
+
+  }
+
+  &__item {
+    display: inline-flex;
+    background-size: auto 100%;
+
+    &_vegan {
+      background-position-x: 100%;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  &__left-col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding:  40px  22px;
+
+    @include tablets {
+      padding:  40px  20px;
+    }
+
+    @include phones {
+      padding:  72px  24px;
+    }
+  }
+
+  h3 {
+    font-size:  40px;
+    @include gagalin();
+    color: $white;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: inline-block;
+    line-height: 1;
+
+    @include phones {
+      font-size:  45px;
+    }
+  }
+
+  &__right-col {
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: rgb(47, 50, 52);
+    opacity: 0.929;
+    transition: all .3s;
+
+    p {
+      @include ubuntu();
+      line-height: 1.714;
+      color: #ffffff;
+    }
+  }
+
+  &__item_active {
+
+    .menu-accordeon__right-col {
+      width: 50vw;
+      padding: 0 7%;
+
+      @include tablets {
+        width: 100%;
+      }
+    }
+
+    .menu-accordeon__left-col h3 {
+      color: $orange;
+    }
+
+    .menu-accordeon__right-col p {
+      opacity: initial;
+    }
+  }
+}
+
+@each $food in (meet, vegan, diet) {
+  .menu-accordeon__item_#{$food} {
+    background-image: url('../img/menu/#{$food}.jpg');
+  }
+}
