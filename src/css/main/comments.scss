@@ -99,6 +99,10 @@
       font-size:  14px;
       line-height: 1.71;
 
+      @include tablets {
+        line-height: 1;
+      }
+
       @include phones {
         display: none;
       }
