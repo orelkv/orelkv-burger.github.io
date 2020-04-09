@@ -18,6 +18,9 @@
 
       activeSection.removeClass('active');
       indexSection.addClass('active');
+      $('.aside__item').eq(sectionEq)
+        .addClass('aside__item_active')
+        .siblings().removeClass('aside__item_active')
     };
 
     $(document).on('transitionend', () => {
@@ -70,26 +73,35 @@
     moveSection(target - 1);
   })
 
-  $(window).on('touchstart', e => {
-    let touch = e.changedTouches[0];
-    let start = parseInt(touch.clientY);
-    $(window).on('touchend', e => {
-      let touch = e.changedTouches[0];
-      let dist = parseInt(touch.clientY) - start;
+  const md = new MobileDetect(window.navigator.userAgent);
+  const isMobile = md.mobile();
 
-      console.log(dist)
-      const activeSection = containerSection.find('.active');
-      const nextIndex = activeSection.next().index();
-      const prevIndex = activeSection.prev().index();
+  if (isMobile) {
+    $('body').swipe({
+      swipe: (event, direction) => {
+        const activeSection = containerSection.find('.active');
+        const nextIndex = activeSection.next().index();
+        const prevIndex = activeSection.prev().index();
+        const tagName = event.target.tagName.toLowerCase();
 
+        if (tagName != 'ymaps') {
+          if (direction === 'up') {
+            numberSection = nextIndex;
+            if (numberSection >= 0) {
+              moveSection(numberSection);
+            }
+          }
 
-      numberSection = dist < 0 ? nextIndex : prevIndex;
-
-      if (numberSection >= 0) {
-        moveSection(numberSection);
+          if (direction === 'down') {
+            numberSection = prevIndex;
+            if (numberSection >= 0) {
+              moveSection(numberSection);
+            }
+          }
+        }
       }
     })
-  })
+  }
 
   const sectionAside = $('.section');
   const asideContainer = $('.aside__list');
@@ -111,15 +123,6 @@
   $('.aside__link').on('click', e => {
     e.preventDefault();
     const $this = $(e.currentTarget);
-    const item = $('.aside__item');
-
     moveSection($this.attr('data-scroll-to'));
-
-    if ($this.hasClass('aside__link_active')) {
-      $this.removeClass('aside__link_active');
-    } else {
-      $this.removeClass('aside__link_active');
-      $this.addClass('aside__link_active');
-    }
   })
 })()

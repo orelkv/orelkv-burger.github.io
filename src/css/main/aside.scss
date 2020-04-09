@@ -8,6 +8,14 @@
     display: none;
   }
 
+  &__item {
+    &_active {
+      .aside__link {
+        @extend .aside__link_active;
+      }
+    }
+  }
+
   &__link {
     padding: 0 9px;
     position: relative;

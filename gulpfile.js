@@ -14,7 +14,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
-const { DIST_PATH, SRC_PATH, JS_LIBS, STYLES_LIBS } = require('./gulp.config');
+const { DIST_PATH, SRC_PATH, JS_LIBS, STYLES_LIBS, JS_TOUCH, JS_MOBILE } = require('./gulp.config');
 const gulpif = require('gulp-if');
 const image = require('gulp-image');
 const imagemin = require('gulp-imagemin');
@@ -44,7 +44,7 @@ task('copy:font', () => {
 task('image', () => {
   src(`${SRC_PATH}/img/**/*`)
     .pipe(image())
-    .pipe(dest(`${DIST_PATH}/img`));
+    .pipe(dest(`${DIST_PATH}/img/`));
 });
 
 task('imageMin', () => {
@@ -74,14 +74,14 @@ task('sass', () => {
       rem: 16,            // root element (html) font-size (default: 16)
     }))                     /// перевод из px в rem
     .pipe(gulpif(env === 'dev', sourcemaps.write()))   // в скобках указывается путь куда сохранять сорс мапы, если нее указать то будут сохранены в конечном css
-    .pipe(dest(DIST_PATH))
+    .pipe(dest(`${DIST_PATH}/css`))
     .pipe(reload({ stream: true }))            //создает задание на перезапуск браузера при изменении файлов и работает в общем потоке
 });
 
 
 
 task('script', () => {
-  return src([...JS_LIBS, `${SRC_PATH}/animation/*.js`])
+  return src([...JS_LIBS, ...JS_TOUCH, ...JS_MOBILE, `${SRC_PATH}/animation/*.js`])
     .pipe(gulpif(env === 'dev', sourcemaps.init()))                          // для прописывания путей из scss
     .pipe(concat('main.min.js', { newLine: ';' }))        // для склейки файлов
     .pipe(gulpif(env === 'prod', babel({                                 // для перевода в старый синтаксис js
@@ -98,7 +98,7 @@ task('icon', () => {
     .pipe(svgo({                                            // подключить плагин и удалить ненужные атрибуты
       plugins: [{
         removeAttrs: {
-          attrs: '(style|width|height|data.*)'
+          attrs: '(style)'
         }
       }]
     }))

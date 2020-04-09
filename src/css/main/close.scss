@@ -31,6 +31,16 @@
     }
   }
 
+  &__comments {
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: block;
+    stroke: #eb8262;
+    flex-shrink: 0;
+  }
+
+
 }
 
 
