@@ -1,5 +1,4 @@
 .player {
-  width: 100%;
   height: 100%;
 
   &__container {
@@ -14,5 +13,15 @@
   
   &__controls {
     height: 35px;
+  }
+  &__elem {
+    height: 100%;
+    background: url('../img/our-work/player-fon.jpg') center center / cover no-repeat;
+  }
+}
+
+.play {
+  .player__elem {
+    background: none;
   }
 }

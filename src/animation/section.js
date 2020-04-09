@@ -108,13 +108,13 @@
 
   const asideGenerator = function () {
     $(sectionAside).each(function (index) {
-      let item = $('<li>', {
+      let itemAside = $('<li>', {
         attr: {
           class: 'aside__item'
         },
         html: `<a href="#" class="aside__link" data-scroll-to=${index}></a>`
       })
-      $(asideContainer).append(item);
+      $(asideContainer).append(itemAside);
     })
   }
 

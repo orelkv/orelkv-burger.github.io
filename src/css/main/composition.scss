@@ -73,14 +73,14 @@
     line-height: 1;
 
     @include tablets {
-      width: 250px;
+      width: 47vw;
       min-width:  220px;
       padding: 15% 20% 15% 24%;
       justify-content: space-between;
     }
 
     @include phones {
-      width: 230px;
+      width: 47vw;
       min-width:  200px;
     }
   }

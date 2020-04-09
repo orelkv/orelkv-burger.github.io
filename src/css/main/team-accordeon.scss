@@ -20,7 +20,6 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
 
       @include gagalin();
       font-size:  14px;
@@ -28,6 +27,7 @@
 
       @include tablets {
         font-size:  23px;
+        justify-content: center;
       }
 
       @include phones {

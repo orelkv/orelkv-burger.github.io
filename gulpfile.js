@@ -19,6 +19,7 @@ const gulpif = require('gulp-if');
 const image = require('gulp-image');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
+const imgCompress = require('imagemin-jpeg-recompress');
 const cache = require('gulp-cache');
 const env = process.env.NODE_ENV;
 
@@ -41,6 +42,23 @@ task('copy:font', () => {
     .pipe(reload({ stream: true }));            //создает задание на перезапуск браузера при изменении файлов и работает в общем потоке
 });
 
+task('img', function () {
+  return src(`${SRC_PATH}/img/**/*`)
+    .pipe(cache(imagemin([
+      imgCompress({
+        loops: 4,
+        min: 70,
+        max: 80,
+        quality: 'high'
+      }),
+      imagemin.gifsicle(),
+      imagemin.optipng(),
+      imagemin.svgo()
+    ])))
+    .pipe(dest(`${DIST_PATH}/img/`));
+});
+
+
 task('image', () => {
   src(`${SRC_PATH}/img/**/*`)
     .pipe(image())
@@ -49,11 +67,11 @@ task('image', () => {
 
 task('imageMin', () => {
   src(`${SRC_PATH}/img/**/*`)
-    .pipe(cache(imagemin({                    // Сжимаем их с наилучшими настройками
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngquant()]
+    .pipe(cache(imagemin({
+      // interlaced: true,
+      // progressive: true,
+      // svgoPlugins: [{ removeViewBox: false }],
+      // use: [pngquant()]
     })))
     .pipe(dest(`${DIST_PATH}/img`))
 });
@@ -67,7 +85,7 @@ task('sass', () => {
     .pipe(gulpif(env === 'prod', autoprefixer({                // автопрефиксы
       cascade: false
     })))
-    .pipe(gulpif(env === 'prod', gcmq()))          // соединение схожих медиа запросов
+    // .pipe(gulpif(env === 'prod', gcmq()))          // соединение схожих медиа запросов
     .pipe(gulpif(env === 'prod', cleanCSS()))       // для старых браузеров указание в скобках не нужны. удалить, для минификации кода
     .pipe(px2rem({
       dpr: 1,             // base device pixel ratio (default: 2)
@@ -77,8 +95,6 @@ task('sass', () => {
     .pipe(dest(`${DIST_PATH}/css`))
     .pipe(reload({ stream: true }))            //создает задание на перезапуск браузера при изменении файлов и работает в общем потоке
 });
-
-
 
 task('script', () => {
   return src([...JS_LIBS, ...JS_TOUCH, ...JS_MOBILE, `${SRC_PATH}/animation/*.js`])
@@ -126,9 +142,10 @@ task('watch', () => {
   watch(`${SRC_PATH}/*.html`, series('copy:html'));
   watch(`${SRC_PATH}/animation/*.js`, series('script'));
   watch(`${SRC_PATH}/img/svg/*.svg`, series('icon'));
+  watch(`${SRC_PATH}/img/**/*`, series('img'));
 })
 
-task('default', series('clean', parallel('copy:html', 'copy:font', 'sass', 'script', 'icon'),
+task('default', series('clean', parallel('copy:html', 'copy:font', 'img', 'sass', 'script', 'icon'),
   parallel('watch', 'server')));
 
-task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'script', 'icon')));
+task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'img', 'script', 'icon'), 'server'));
