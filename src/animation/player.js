@@ -29,8 +29,9 @@
 
   const playMove = function () {
     let playPosition = player.currentTime;
-
+    
     moveController.style.left = (playPosition / playDuration) * 97 + '%';
+    // console.log(moveController.style.left)
   };
 
   

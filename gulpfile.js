@@ -129,4 +129,5 @@ task('watch', () => {
 task('default', series('clean', parallel('copy:html', 'copy:font', 'img', 'sass', 'script', 'icon'),
   parallel('watch', 'server')));
 
-task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'img', 'script', 'icon')));
+task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'img', 'script', 'icon'),  parallel('watch', 'server')));
+
