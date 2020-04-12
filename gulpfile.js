@@ -16,9 +16,7 @@ const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const { DIST_PATH, SRC_PATH, JS_LIBS, STYLES_LIBS, JS_TOUCH, JS_MOBILE } = require('./gulp.config');
 const gulpif = require('gulp-if');
-const image = require('gulp-image');
 const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
 const imgCompress = require('imagemin-jpeg-recompress');
 const cache = require('gulp-cache');
 const env = process.env.NODE_ENV;
@@ -56,24 +54,6 @@ task('img', function () {
       imagemin.svgo()
     ])))
     .pipe(dest(`${DIST_PATH}/img/`));
-});
-
-
-task('image', () => {
-  src(`${SRC_PATH}/img/**/*`)
-    .pipe(image())
-    .pipe(dest(`${DIST_PATH}/img/`));
-});
-
-task('imageMin', () => {
-  src(`${SRC_PATH}/img/**/*`)
-    .pipe(cache(imagemin({
-      // interlaced: true,
-      // progressive: true,
-      // svgoPlugins: [{ removeViewBox: false }],
-      // use: [pngquant()]
-    })))
-    .pipe(dest(`${DIST_PATH}/img`))
 });
 
 task('sass', () => {
@@ -126,6 +106,7 @@ task('icon', () => {
       }
     }))
     .pipe(dest(`${DIST_PATH}/img/`))
+    .pipe(reload({ stream: true }));           //создает задание на перезапуск браузера при изменении файлов и работает в общем потоке
 });
 
 task('server', () => {
@@ -141,11 +122,11 @@ task('watch', () => {
   watch(`${SRC_PATH}/css/**/*.scss`, series('sass'));
   watch(`${SRC_PATH}/*.html`, series('copy:html'));
   watch(`${SRC_PATH}/animation/*.js`, series('script'));
-  watch(`${SRC_PATH}/img/svg/*.svg`, series('icon'));
+  watch(`${SRC_PATH}/svg/*.svg`, series('icon'));
   watch(`${SRC_PATH}/img/**/*`, series('img'));
 })
 
 task('default', series('clean', parallel('copy:html', 'copy:font', 'img', 'sass', 'script', 'icon'),
   parallel('watch', 'server')));
 
-task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'img', 'script', 'icon'), 'server'));
+task('build', series('clean', parallel('copy:html', 'copy:font', 'sass', 'img', 'script', 'icon')));

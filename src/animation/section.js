@@ -18,6 +18,7 @@
 
       activeSection.removeClass('active');
       indexSection.addClass('active');
+
       $('.aside__item').eq(sectionEq)
         .addClass('aside__item_active')
         .siblings().removeClass('aside__item_active')
@@ -70,7 +71,7 @@
     e.preventDefault();
     const $this = $(e.currentTarget);
     const target = $this.attr('data-scroll-to');
-    moveSection(target - 1);
+    moveSection(target);
   })
 
   const md = new MobileDetect(window.navigator.userAgent);
@@ -124,5 +125,15 @@
     e.preventDefault();
     const $this = $(e.currentTarget);
     moveSection($this.attr('data-scroll-to'));
+  })
+
+  $('.btn__order').on('click', e => {
+    e.preventDefault();
+    moveSection($('#order').index());
+  })
+
+  $('.next-page__link').on('click', e => {
+    e.preventDefault();
+    moveSection($('#best').index());
   })
 })()

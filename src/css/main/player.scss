@@ -1,27 +1,144 @@
 .player {
-  height: 100%;
+  max-width: 660px;
+  max-height: 370px;
+  width: 94vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets {
+    max-width: 722px;
+    max-height: 406px;
+    height: 53vw;
+
+    }
 
   &__container {
-    width: 662px;
-    height: 406px;
+    font-size: 0;
   }
 
   &__wrapper {
-     width: 100%;
-     height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
-  
+
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__fon {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 1111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/our-work/player-fon.jpg') top center / contain no-repeat;
+
+    &-play {
+      fill: #ffffff;
+      opacity: .9;
+      width: 81px;
+      height: 118px;
+      cursor: pointer;
+    }
+  }
+
   &__controls {
     height: 35px;
-  }
-  &__elem {
-    height: 100%;
-    background: url('../img/our-work/player-fon.jpg') center center / cover no-repeat;
-  }
-}
+    width: 100%;
+    padding: 7px 20px;
+    background-color: #3e3e3e;
+    display: inline-flex;
+    justify-content: space-between;
 
-.play {
-  .player__elem {
-    background: none;
+    @include tablets {
+      height: 45px;
+    }
+
+    @include phones {
+      height: 30px;
+    }
+  }
+
+  &__start {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__icon {
+    height: 24px;
+    width: 17px;
+    margin-right: 20px;
+    fill: #626262;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &-volume {
+      cursor: initial;
+    }
+
+    &-pause {
+      display: none;
+      stroke-width: 15px;
+      stroke: #626262;
+    }
+  }
+
+  &__playback {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  &__move {
+    width: 100%;
+    height: 4px;
+    background-color: #626262;
+    border-radius: 1px;
+  }
+
+  &__controller {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #626262;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &__volume {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    flex-shrink: 0;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__volume-control {
+    display: flex;
+    align-items: center;
+    width: 59px;
+    position: relative;
+  }
+
+  &__volume-move {
+    width: 100%;
+    height: 4px;
+    background-color: #626262;
+    border-radius: 1px;
   }
 }
