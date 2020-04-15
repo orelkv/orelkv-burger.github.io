@@ -23,7 +23,7 @@
     @include phones {
       flex-direction: row;
       text-align: left;
-      margin: 0 0  51px;
+      margin: 0 0  30px;
     }
 
 
@@ -52,7 +52,7 @@
     h3 {
       @include lifehack();
       font-size:  24px;
-      margin-bottom:  20px;
+      margin-bottom:  15px;
       line-height: 1.17;
 
       @include phones {

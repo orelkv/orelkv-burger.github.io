@@ -72,7 +72,7 @@
   player.addEventListener('ended', function () {
     fon.style.display = 'flex';
     player.currentTime = 0;
-  }, false);
+  });
 
 
 
@@ -85,7 +85,6 @@
 
     player.currentTime = newMovePosition / 97 * playDuration;
   });
-
 
 
   volumeMove();

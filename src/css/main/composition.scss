@@ -80,8 +80,9 @@
     }
 
     @include phones {
-      width: 47vw;
+      width: 53vw;
       min-width:  200px;
+      padding: 15% 15% 15% 15%;
     }
   }
 

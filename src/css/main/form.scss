@@ -46,14 +46,14 @@
     }
 
     @include phones {
-      margin-bottom: 5%;
+      margin-bottom: 3%;
     }
 
     &-textarea {
       margin-bottom: 5%;
 
       @include phones {
-        margin-bottom: 5%;
+        margin-bottom: 3%;
       }
     }
   }
@@ -129,7 +129,7 @@
   cursor: pointer;
   
       @include phones {
-      margin-bottom:  26px;
+      margin-bottom:  4%;
     }
 
   &:last-child {
